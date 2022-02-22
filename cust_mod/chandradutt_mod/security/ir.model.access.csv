@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_chandradutt_mod_chandradutt_mod,chandradutt_mod.chandradutt_mod,model_chandradutt_mod_chandradutt_mod,base.group_user,1,1,1,1
