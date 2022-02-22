@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="chandradutt_wizard_form">
+          <field name="name">chandradutt_wizard form</field>
+          <field name="model">chandradutt_wizard.wizard</field>
+          <field name="arch" type="xml">
+            <form string="abc">
+              <field name="id" placeholder="enter id" use="required"/>
+              <field name="name" widget="name" use="required"/>
+              <field name="dob" />
+              <field name="email" widget="email"/>
+
+        <!--          <field name="city" />-->
+        <!--          <field name="boarding"/>-->
+        <!--          <field name="destination"/>-->
+        <!--          <field name="gender" options="{'horizontal':true}"/>-->
+            </form>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="chandradutt_wizard_wiz_action_window">
+            <field name="name">chandradutt_wizard form</field>
+            <field name="res_model">chandradutt_wizard.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="chandradutt_wizard_form"/>
+
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

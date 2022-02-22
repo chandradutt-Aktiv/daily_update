@@ -8,6 +8,7 @@ class travel_management(models.Model):
     _name = 'travel_management.travel_management'
     _description = 'travel_management.travel_management'
 
+
     Id = fields.Integer()
     name = fields.Char()
     dob = fields.Date()

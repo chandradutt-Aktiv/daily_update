@@ -85,7 +85,7 @@
     <menuitem name="Server to list" id="travel_management" parent="travel_management.menu_2"
               action="travel_management.action_server"/>
 
-    <menuitem name="pop" id="tm_wizard" parent="travel_management.menu_2"
+    <menuitem name="pop" id="tm_wizard" parent="travel_management.menu_root"
               action="travel_management_wiz_action_window"/>
   </data>
 </odoo>
