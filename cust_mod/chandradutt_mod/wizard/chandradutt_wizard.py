@@ -2,7 +2,7 @@ from odoo import models, fields
 
 class chandradutt_wizard(models.TransientModel):
 
-    _name = 'chandradutt_wizard.wizard'
+    _name = 'chandradutt_wizard'
 
     id = fields.Integer()
     name = fields.Char()

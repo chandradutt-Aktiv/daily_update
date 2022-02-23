@@ -12,6 +12,7 @@
           <field name="dob" />
           <field name="email" widget="email"/>
           <field name="mobileNo" widget="mobile" placeholder="Enter Mobile Number"/>
+          <field name="addimage" widget="image"/>
           <field name="maritialstatus"/>
 <!--          <field name="city" />-->
 <!--          <field name="boarding"/>-->
@@ -34,7 +35,8 @@
 <!--              <field name="inherit_id" ref="base.view_partner_form"/>-->
              <field name="email" widget="email"/>
              <field name="mobileNo" widget="mobile" placeholder="Enter Mobile Number"/>
-              <field name="maritialstatus" />
+              <field name="addimage" />
+            <field name="maritialstatus" />
 <!--            </sheet>-->
           <field name="city" />
           <field name="boarding"/>

@@ -14,6 +14,7 @@ class travel_management(models.Model):
     dob = fields.Date()
     email = fields.Char()
     mobileNo = fields.Integer()
+    addimage = fields.Binary()
     city = fields.Selection([('ahmedabad','Ahmedabad'),('mahesana','Mahesana'),('Bhavnagar','Bhavnagar')])
     boarding = fields.Char()
     destination = fields.Char()

@@ -2,7 +2,7 @@
     <data>
         <record model="ir.ui.view" id="chandradutt_wizard_form">
           <field name="name">chandradutt_wizard form</field>
-          <field name="model">chandradutt_wizard.wizard</field>
+          <field name="model">chandradutt_wizard</field>
           <field name="arch" type="xml">
             <form string="abc">
               <field name="id" placeholder="enter id" use="required"/>
@@ -20,7 +20,7 @@
 
         <record model="ir.actions.act_window" id="chandradutt_wizard_wiz_action_window">
             <field name="name">chandradutt_wizard form</field>
-            <field name="res_model">chandradutt_wizard.wizard</field>
+            <field name="res_model">chandradutt_wizard</field>
             <field name="view_mode">form</field>
             <field name="view_id" ref="chandradutt_wizard_form"/>
 
