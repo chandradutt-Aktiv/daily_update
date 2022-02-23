@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="travel_management_form">
+          <field name="name">travel_management form</field>
+          <field name="model">travel_management.wizard</field>
+          <field name="arch" type="xml">
+            <form string="abc">
+              <field name="id" placeholder="enter id" use="required"/>
+              <field name="name" widget="name" use="required"/>
+              <field name="dob" />
+              <field name="email" widget="email"/>
+
+        <!--          <field name="city" />-->
+        <!--          <field name="boarding"/>-->
+        <!--          <field name="destination"/>-->
+        <!--          <field name="gender" options="{'horizontal':true}"/>-->
+            </form>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="travel_management_wiz_action_window">
+            <field name="name">travel_management form</field>
+            <field name="res_model">travel_management.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="travel_management_form"/>
+
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>
