@@ -8,13 +8,13 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="s_name"/>
-                    <field name="s_rollno" />
+                    <field name="s_rollno"/>
                     <field name="s_age"/>
                     <field name="s_mobile" widget="mobile"/>
                     <field name="s_email" widget="email"/>
                     <field name="s_image" widget="image"/>
                     <field name="sex"/>
-<!--                    <field name="dob"/>-->
+                    <!--                    <field name="dob"/>-->
                 </tree>
             </field>
         </record>
@@ -26,27 +26,46 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
+                        <div class="ie_button_box" name="button_box">
+                            <button name="print" type="object" class="oe_stat_button" icon="fa-calendar">
+                            </button>
+
+                        </div>
                         <group>
                             <field name="s_name" required="True"/>
                             <field name="s_rollno" required="True"/>
                             <field name="s_age" required="True"/>
-                            <field name="sex" required="True"/>
+                            <field name="sex" required="True" widget="radio"/>
+                            <field name="s_mobile" widget="mobile"/>
+                            <field name="s_email" widget="email" required="True"/>
                         </group>
+                        <notebook>
+                            <page string="search" name="Search">
+                                <group>
+                                    <field name="mca"/>
+                                </group>
+                            </page>
+                            <page string="celebrations" name="Celebrations">
+                                <group>
+                                    <field name="functions"/>
+                                </group>
+                            </page>
+                        </notebook>
 
                     </sheet>
 
                     <sheet>
                         <group>
-                            <field name="s_mobile" widget="mobile"/>
-                            <field name="s_email" widget="email" required="True"/>
+
                             <field name="s_image" widget="image" required="True"/>
-                            <field name="sex"/>
-<!--                            <field name="city"/>-->
-<!--                            <field name="dob"/>-->
+                            <!--                            <field name="sex"/>-->
+                            <!--                            <field name="city"/>-->
+                            <!--                            <field name="dob"/>-->
                         </group>
+
                     </sheet>
                     <group>
-                        <button>submit</button>
+                        <button name="print" string="submit data" data-hotkey="q" type="button"/>
                     </group>
 
                 </form>
@@ -97,6 +116,8 @@
 
         <menuitem name="wizzz" id="menu_3" parent="clg.menu_root"
                   action="clg.added_wiz"/>
+        <menuitem name="wizard2" id="menu34" parent="clg.menu_2"
+                  action="clg.added_wiz2"/>
 
     </data>
 </odoo>

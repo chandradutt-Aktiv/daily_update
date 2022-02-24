@@ -5,3 +5,6 @@ class clg_wizard(models.TransientModel):
 
     fees = fields.Float()
     paid = fields.Selection([('paid','Paid'),('unpaid','Unpaid')])
+
+    def print1(self):
+        print('hello world')

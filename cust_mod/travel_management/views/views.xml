@@ -89,5 +89,6 @@
 
     <menuitem name="pop" id="tm_wizard" parent="travel_management.menu_root"
               action="travel_management_wiz_action_window"/>
+
   </data>
 </odoo>

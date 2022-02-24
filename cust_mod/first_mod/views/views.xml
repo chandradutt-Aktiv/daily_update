@@ -64,5 +64,8 @@
     <menuitem name="Server to list" id="first_mod" parent="first_mod.menu_2"
               action="first_mod.action_server"/>
 
+    <menuitem name="sunny" id="first_modd" parent="first_mod.menu_2"
+              action="first_mod.added_wiz"/>
+
   </data>
 </odoo>

@@ -8,3 +8,6 @@ class travel_management(models.TransientModel):
     name = fields.Char()
     dob = fields.Date()
     email = fields.Char()
+
+    def print(self):
+        print('hello world')

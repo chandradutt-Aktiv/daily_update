@@ -5,10 +5,16 @@
           <field name="model">travel_management.wizard</field>
           <field name="arch" type="xml">
             <form string="abc">
-              <field name="id" placeholder="enter id" use="required"/>
-              <field name="name" widget="name" use="required"/>
-              <field name="dob" />
-              <field name="email" widget="email"/>
+                <group>
+                  <field name="id" use="required"/>
+                  <field name="name" widget="name" use="required"/>
+                  <field name="dob" />
+                  <field name="email" widget="email"/>
+                </group>
+                <footer>
+                    <button name="%(travel_management.action_window)d" string="Print" type="action"/>
+                    <button name="cancel" string="Cancel" type="cancel"/>
+                </footer>
 
         <!--          <field name="city" />-->
         <!--          <field name="boarding"/>-->
@@ -26,6 +32,7 @@
 
             <field name="target">new</field>
         </record>
+
 
     </data>
 </odoo>

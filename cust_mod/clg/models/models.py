@@ -10,15 +10,21 @@ class clg(models.Model):
 
     s_name = fields.Char()
     s_rollno = fields.Integer()
-    s_age = fields.Integer()
+    s_age = fields.Date()
     s_mobile = fields.Integer()
     s_email = fields.Char()
     s_image = fields.Binary()
     sex = fields.Selection([('male','Male'),('female','Female'),('transgender','Transgender')])
     fees = fields.Float()
-    #city = fields.Selection()
-    description = fields.Text()
+    # city = fields.Selection([()])
+    # description = fields.Text()
+    mca = fields.Char()
+    functions = fields.Selection([('navaratri','Navaratri'),('holi','Holi'),
+                                  ('christmas','Christmas'),('alldays','Alldays')])
 
+
+    def print(self):
+        print('hello')
 
     @api.depends('value')
     def _value_pc(self):
