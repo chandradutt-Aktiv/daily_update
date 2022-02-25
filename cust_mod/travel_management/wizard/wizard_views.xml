@@ -2,7 +2,7 @@
     <data>
         <record model="ir.ui.view" id="travel_management_form">
           <field name="name">travel_management form</field>
-          <field name="model">travel_management.wizard</field>
+          <field name="model">travel_management.travel_management</field>
           <field name="arch" type="xml">
             <form string="abc">
                 <group>
@@ -26,7 +26,7 @@
 
         <record model="ir.actions.act_window" id="travel_management_wiz_action_window">
             <field name="name">travel_management form</field>
-            <field name="res_model">travel_management.wizard</field>
+            <field name="res_model">travel_management.travel_management</field>
             <field name="view_mode">form</field>
             <field name="view_id" ref="travel_management_form"/>
 

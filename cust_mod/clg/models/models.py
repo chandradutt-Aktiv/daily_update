@@ -22,9 +22,20 @@ class clg(models.Model):
     functions = fields.Selection([('navaratri','Navaratri'),('holi','Holi'),
                                   ('christmas','Christmas'),('alldays','Alldays')])
 
+    state = fields.Selection([('to_send','To_send'),('sent','Sent'),
+                              ('to_cancel','To_cancel'),('cancelled','Cancelled')], default="sent",string='status')
 
-    def print(self):
-        print('hello')
+
+
+    def students(self):
+        return{
+            'type':'ir.actions.act_window',
+            'name':'print',
+            'res_model':'wiz2.wiz2',
+            'view_type':False,
+            'view_mode':'tree,form',
+            'target':'current',
+        }
 
     @api.depends('value')
     def _value_pc(self):

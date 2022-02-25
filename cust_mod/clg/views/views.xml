@@ -12,24 +12,41 @@
                     <field name="s_age"/>
                     <field name="s_mobile" widget="mobile"/>
                     <field name="s_email" widget="email"/>
-                    <field name="s_image" widget="image"/>
+                    <field name="s_image" widget="image" />
                     <field name="sex"/>
                     <!--                    <field name="dob"/>-->
                 </tree>
             </field>
         </record>
 
-
+        <record model="ir.ui.view" id="clg_tree">
+            <field name="name">clg tree</field>
+            <field name="model">clg.clg</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="s_name" required="True"/>
+                    <field name="s_rollno" required="True"/>
+                    <field name="s_age" required="True"/>
+                </tree>
+            </field>
+        </record>
         <record model="ir.ui.view" id="clg_form">
             <field name="name">clg form</field>
             <field name="model">clg.clg</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <!-- Post -->
+                        <field name="state" widget="statusbar" options="{'clickable':'2'}"
+                               statusbar_visible="to_send,sent,to_cancel"/>
+                    </header>
                     <sheet>
-                        <div class="ie_button_box" name="button_box">
-                            <button name="print" type="object" class="oe_stat_button" icon="fa-calendar">
+                        <div class="oe_button_box" name="button_box">
+                            <button name="students" type="object" class="btn btn-primary"
+                                    icon="fa-copy">
+                                <!--                                <field name="stude" class="o_stat_value"/>-->
+                                <!--                                <span class="o_sat_text">students</span>-->
                             </button>
-
                         </div>
                         <group>
                             <field name="s_name" required="True"/>
@@ -57,10 +74,8 @@
                     <sheet>
                         <group>
 
-                            <field name="s_image" widget="image" required="True"/>
-                            <!--                            <field name="sex"/>-->
-                            <!--                            <field name="city"/>-->
-                            <!--                            <field name="dob"/>-->
+                            <field name="s_image" widget="image" />
+                            <field name="sex"/>
                         </group>
 
                     </sheet>
@@ -115,7 +130,7 @@
                   action="clg.action_server"/>
 
         <menuitem name="wizzz" id="menu_3" parent="clg.menu_root"
-                  action="clg.added_wiz"/>
+                  action="clg_added_wiz"/>
         <menuitem name="wizard2" id="menu34" parent="clg.menu_2"
                   action="clg.added_wiz2"/>
 
