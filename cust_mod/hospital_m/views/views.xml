@@ -7,6 +7,7 @@
       <field name="model">hospital_m.hospital_m</field>
       <field name="arch" type="xml">
         <tree>
+<!--          <field name="p_id"/>-->
           <field name="fname"/>
           <field name="image" widget="image"/>
           <field name="lname"/>
@@ -31,6 +32,7 @@
       <field name="arch" type="xml">
         <form>
           <group>
+<!--            <field name="p_id" placeholder="Patient Id"/>-->
             <field name="fname" placeholder="First Name"/>
             <field name="lname" placeholder="Last name"/>
             <field name="mobile" widget="mobile"/>

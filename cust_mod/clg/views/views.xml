@@ -37,7 +37,7 @@
                 <form>
                     <header>
                         <!-- Post -->
-                        <field name="state" widget="statusbar" options="{'clickable':'2'}"
+                        <field name="state" widget="statusbar" options="{'clickable':'1'}"
                                statusbar_visible="to_send,sent,to_cancel"/>
                     </header>
                     <sheet>

@@ -1,97 +1,147 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
+    <data>
+        <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="travel_management.list">
-      <field name="name">travel_management list</field>
-      <field name="model">travel_management.travel_management</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="id" placeholder="enter id" use="required"/>
-          <field name="name" widget="name" use="required"/>
-          <field name="dob" />
-          <field name="email" widget="email"/>
-          <field name="mobileNo" widget="mobile" placeholder="Enter Mobile Number"/>
-          <field name="addimage" widget="image"/>
-          <field name="maritialstatus"/>
-<!--          <field name="city" />-->
-<!--          <field name="boarding"/>-->
-<!--          <field name="destination"/>-->
-<!--          <field name="gender" options="{'horizontal':true}"/>-->
-        </tree>
-      </field>
-    </record>
+        <record model="ir.ui.view" id="travel_management.list">
+            <field name="name">travel_management list</field>
+            <field name="model">travel_management.travel_management</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id" placeholder="enter id" use="required"/>
+                    <field name="name" widget="name" use="required"/>
+                    <field name="dob"/>
+                    <field name="email" widget="email"/>
+                    <field name="mobileNo" widget="mobile" placeholder="Enter Mobile Number"/>
+                    <field name="addimage" widget="image"/>
+                    <field name="maritialstatus"/>
+                    <field name="invs"/>
 
-    <record model="ir.ui.view" id="travel_management.form">
-      <field name="name">travel_management form</field>
-      <field name="model">travel_management.travel_management</field>
-      <field name="arch" type="xml">
-        <form>
-          <group>
-            <field name="id" placeholder="enter id" use="required"/>
-            <field name="name" widget="name" use="required"/>
-            <field name="dob" />
-<!--            <sheet>-->
-<!--              <field name="inherit_id" ref="base.view_partner_form"/>-->
-             <field name="email" widget="email"/>
-             <field name="mobileNo" widget="mobile" placeholder="Enter Mobile Number"/>
-              <field name="addimage" />
-            <field name="maritialstatus" />
-<!--            </sheet>-->
-          <field name="city" />
-          <field name="boarding"/>
-          <field name="destination"/>
-          <field name="gender" widget="radio" options="{'horizontal':true}"/>
-          </group>
-        </form>
-      </field>
-    </record>
-<!--    &lt;!&ndash; actions opening views on models &ndash;&gt;-->
+                    <!--          <field name="city" />-->
+                    <!--          <field name="boarding"/>-->
+                    <!--          <field name="destination"/>-->
+                    <!--          <field name="gender" options="{'horizontal':true}"/>-->
+                </tree>
+            </field>
+        </record>
 
-    <record model="ir.actions.act_window" id="travel_management.action_window">
-      <field name="name">travel_management window</field>
-      <field name="res_model">travel_management.travel_management</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+        <record model="ir.ui.view" id="travel_management.form">
+            <field name="name">travel_management form</field>
+            <field name="model">travel_management.travel_management</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="stat" widget="statusbar" options="{'clickable':'1'}"
+                               statusbar_visible="send,sent,cancel"/>
+                    </header>
+                    <group>
+                        <field name="id" placeholder="enter id" use="required"/>
+                        <field name="name" widget="name" use="required"/>
+                        <field name="dob"/>
+                        <!--            <sheet>-->
+                        <!--              <field name="inherit_id" ref="base.view_partner_form"/>-->
+                        <field name="email" widget="email"/>
+                        <field name="mobileNo" widget="mobile" placeholder="Enter Mobile Number"/>
+                        <field name="addimage"/>
+                        <field name="maritialstatus"/>
+                        <!--            </sheet>-->
+                        <field name="city"/>
+                        <field name="boarding"/>
+                        <field name="destination"/>
+                        <field name="gender" widget="radio" options="{'horizontal':true}"/>
+                        <field name="invs"/>
+                    </group>
+                    <notebook>
+                        <page string="invoices">
+                            <field name="appointment_lines">
+                                <tree>
+                                    <field name="product_id"/>
+                                    <field name="product_qty"/>
+                                    <field name="appointment_id" invisible="1"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="product_id"/>
+                                        </group>
+                                        <group>
+                                            <field name="product_qty"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record id="travel_management_search_view" model="ir.ui.view">
+            <field name="name">travel_management search</field>
+            <field name="model">travel_management.travel_management</field>
+            <field name="arch" type="xml">
+                <search string="travel">
+                    <field name="name"/>
+                    <field name="city"/>
+                    <filter string="Male" name="male" domain="[('gender', '=', 'male')]"/>
+                    <filter string="Female" name="female" domain="[('gender', '=', 'female')]"/>
+                    <group expand="1" string="Group By">
+                        <filter string="name" name="name" context="{'group_by':'name'}"/>
+                        <filter string="gender" name="gender" context="{'group_by':'gender'}"/>
+                    </group>
+                </search>
+                <!--                <xpath expr="//field[@name='department_id']" position="after">-->
+                <!--                    <filter string="My Job Positions" name="my_positions" domain="[('user_id', '=', uid)]"/>-->
+                <!--                </xpath>-->
+            </field>
+        </record>
 
 
-    <!-- server action to the one above -->
+        <!--    &lt;!&ndash; actions opening views on models &ndash;&gt;-->
 
-    <record model="ir.actions.server" id="travel_management.action_server">
-      <field name="name">travel_management server</field>
-      <field name="model_id" ref="model_travel_management_travel_management"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
+        <record model="ir.actions.act_window" id="travel_management.action_window">
+            <field name="name">travel_management window</field>
+            <field name="res_model">travel_management.travel_management</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
 
-    <!-- Top menu item -->
+        <!-- server action to the one above -->
 
-    <menuitem name="travel_management" id="travel_management.menu_root"/>
+        <record model="ir.actions.server" id="travel_management.action_server">
+            <field name="name">travel_management server</field>
+            <field name="model_id" ref="model_travel_management_travel_management"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                "type": "ir.actions.act_window",
+                "view_mode": "tree,form",
+                "res_model": model._name,
+                }
+            </field>
+        </record>
 
-    <!-- menu categories -->
 
-    <menuitem name="Menu 1" id="travel_management.menu_1" parent="travel_management.menu_root"/>
-    <menuitem name="Menu 2" id="travel_management.menu_2" parent="travel_management.menu_root"/>
+        <!-- Top menu item -->
 
-    <!-- actions -->
+        <menuitem name="travel_management" id="travel_management.menu_root"/>
 
-    <menuitem name="List" id="travel_management.menu_1_list" parent="travel_management.menu_1"
-              action="travel_management.action_window"/>
-    <menuitem name="Server to list" id="travel_management" parent="travel_management.menu_2"
-              action="travel_management.action_server"/>
+        <!-- menu categories -->
 
-    <menuitem name="pop" id="travel_management" parent="travel_management.menu_2"
-              action="travel_management.action_window"/>
+        <menuitem name="Menu 1" id="travel_management.menu_1" parent="travel_management.menu_root"/>
+        <menuitem name="Menu 2" id="travel_management.menu_2" parent="travel_management.menu_root"/>
 
-<!--    <menuitem name="pop" id="travel_management_wizard" parent="travel_management.menu_root"-->
-<!--              action="travel_management_wizard.action_window"/>-->
+        <!-- actions -->
 
-  </data>
+        <menuitem name="List" id="travel_management.menu_1_list" parent="travel_management.menu_1"
+                  action="travel_management.action_window"/>
+        <menuitem name="Server to list" id="travel_management" parent="travel_management.menu_2"
+                  action="travel_management.action_server"/>
+
+        <menuitem name="pop" id="tmw" parent="travel_management.menu_2"
+                  action="travel_management_wiz"/>
+
+        <!--    <menuitem name="pop" id="travel_management_wizard" parent="travel_management.menu_root"-->
+        <!--              action="travel_management_wizard.action_window"/>-->
+
+    </data>
 </odoo>

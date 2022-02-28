@@ -7,6 +7,7 @@ class hospital_m(models.Model):
     _name = 'hospital_m.hospital_m'
     _description = 'hospital_m.hospital_m'
 
+    # p_id = fields.Integer()
     fname = fields.Char()
     lname = fields.Char()
     mobile = fields.Integer()

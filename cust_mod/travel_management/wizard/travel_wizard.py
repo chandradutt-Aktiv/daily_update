@@ -9,5 +9,5 @@ class travel_management(models.TransientModel):
     dob = fields.Date()
     email = fields.Char()
 
-    def print(self):
+    def Print(self):
         print('hello world')
