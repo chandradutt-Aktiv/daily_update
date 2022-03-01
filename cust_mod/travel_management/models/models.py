@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# access_travel_management_wizard,travel_management.wizard,model_travel_management_wizard,base.group_user,1,1,1,1
 
 from odoo import models, fields, api
 

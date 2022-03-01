@@ -1,96 +1,101 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
+    <data>
+        <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="hospital_m.list">
-      <field name="name">hospital_m list</field>
-      <field name="model">hospital_m.hospital_m</field>
-      <field name="arch" type="xml">
-        <tree>
-<!--          <field name="p_id"/>-->
-          <field name="fname"/>
-          <field name="image" widget="image"/>
-          <field name="lname"/>
-          <field name="mobile"/>
-          <field name="email"/>
-          <field name="dateofbirth"/>
-          <field name="address"/>
-          <field name="v_charge"/>
-          <field name="blood_group"/>
-          <field name="disease" />
-          <field name="a_date"/>
-<!--          <field name="appoinment_date"/>-->
-        </tree>
-      </field>
-    </record>
-
-
-
-    <record model="ir.ui.view" id="hospital_m.form">
-      <field name="name">hospital_m form</field>
-      <field name="model">hospital_m.hospital_m</field>
-      <field name="arch" type="xml">
-        <form>
-          <group>
-<!--            <field name="p_id" placeholder="Patient Id"/>-->
-            <field name="fname" placeholder="First Name"/>
-            <field name="lname" placeholder="Last name"/>
-            <field name="mobile" widget="mobile"/>
-            <field name="email" widget="email"/>
-            <field name="dateofbirth" placeholder="Date Of Birth"/>
-            <field name="image" widget="image"/>
-            <field name="address"/>
-            <field name="v_charge"/>
-            <field name="blood_group"/>
-            <field name="disease" />
-            <field name="a_date" placeholder="Select Appoinment Date"/>
-<!--          <field name="appoinment_date"/>-->
-          </group>
-        </form>
-      </field>
-    </record>
+        <record model="ir.ui.view" id="hospital_m.list">
+            <field name="name">hospital_m list</field>
+            <field name="model">hospital_m.hospital_m</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!--          <field name="p_id"/>-->
+                    <field name="fname"/>
+                    <field name="image" widget="image"/>
+                    <field name="lname"/>
+                    <field name="gender" />
+                    <field name="mobile"/>
+                    <field name="email"/>
+                    <field name="dateofbirth"/>
+                    <field name="address"/>
+                    <field name="v_charge"/>
+                    <field name="blood_group"/>
+                    <field name="disease"/>
+                    <field name="a_date"/>
+                    <!--          <field name="appoinment_date"/>-->
+                </tree>
+            </field>
+        </record>
 
 
-    <!-- actions opening views on models -->
+        <record model="ir.ui.view" id="hospital_m.form">
+            <field name="name">hospital_m form</field>
+            <field name="model">hospital_m.hospital_m</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <!--            <field name="p_id" placeholder="Patient Id"/>-->
+                        <field name="fname" placeholder="First Name"/>
+                        <field name="lname" placeholder="Last name"/>
+                        <field name="gender" readonly="1" force_save="1" widget="radio"/>
+                        <field name="mobile" widget="mobile"/>
+                        <field name="email" widget="email"/>
+                        <field name="dateofbirth" placeholder="Date Of Birth"/>
+                        <field name="image" widget="image"/>
+                        <field name="address"/>
+                        <field name="v_charge"/>
+                        <field name="blood_group"/>
+                        <field name="disease"/>
+                        <field name="a_date" placeholder="Select Appoinment Date"/>
+                        <field name="doc_name"/>
+                        <field name="doc_names"/>
+                        <!--          <field name="appoinment_date"/>-->
+                    </group>
+                </form>
+            </field>
+        </record>
 
-    <record model="ir.actions.act_window" id="hospital_m.action_window">
-      <field name="name">hospital_m window</field>
-      <field name="res_model">hospital_m.hospital_m</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="hospital_m.action_window">
+            <field name="name">hospital_m window</field>
+            <field name="res_model">hospital_m.hospital_m</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
 
-    <!-- server action to the one above -->
+        <!-- server action to the one above -->
 
-    <record model="ir.actions.server" id="hospital_m.action_server">
-      <field name="name">hospital_m server</field>
-      <field name="model_id" ref="model_hospital_m_hospital_m"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
+        <record model="ir.actions.server" id="hospital_m.action_server">
+            <field name="name">hospital_m server</field>
+            <field name="model_id" ref="model_hospital_m_hospital_m"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                "type": "ir.actions.act_window",
+                "view_mode": "tree,form",
+                "res_model": model._name,
+                }
+            </field>
+        </record>
 
 
-    <!-- Top menu item -->
+        <!-- Top menu item -->
 
-    <menuitem name="hospital_m" id="hospital_m.menu_root"/>
+        <menuitem name="hospital_m" id="hospital_m.menu_root" action="hospital_m.action_window"/>
 
-    <!-- menu categories -->
+        <!-- menu categories -->
 
-    <menuitem name="Menu 1" id="hospital_m.menu_1" parent="hospital_m.menu_root"/>
-    <menuitem name="Menu 2" id="hospital_m.menu_2" parent="hospital_m.menu_root"/>
+        <menuitem name="Menu 1" id="hospital_m.menu_1" parent="hospital_m.menu_root"/>
+        <menuitem name="Menu 2" id="hospital_m.menu_2" parent="hospital_m.menu_root"/>
 
-    <!-- actions -->
+        <!-- actions -->
+<!--        <menuitem name="List" id="hospital_m.menu_1_list" parent="hospital_m.menu_1"-->
+<!--                  action="hospital_m.action_window"/>-->
+<!--        <menuitem name="Server to list" id="hospital_m" parent="hospital_m.menu_2"-->
+<!--                  action="hospital_m.action_window"/>-->
+        <menuitem name="doc" id="doctor_window" parent="hospital_m.menu_root"
+                  action="doctor_action"/>
 
-    <menuitem name="List" id="hospital_m.menu_1_list" parent="hospital_m.menu_1"
-              action="hospital_m.action_window"/>
-    <menuitem name="Server to list" id="hospital_m" parent="hospital_m.menu_2"
-              action="hospital_m.action_server"/>
 
-  </data>
+    </data>
 </odoo>

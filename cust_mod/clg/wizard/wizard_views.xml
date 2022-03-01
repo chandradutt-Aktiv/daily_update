@@ -10,7 +10,7 @@
                         <field name="paid"/>
                     </group>
                     <footer>
-                        <button name="print1" string="Print" type="object" class="btn-primary"/>
+                        <button name="print1" string="Print" type="object"/>
                         <button name="cancel" string="Cancel" special="cancel"/>
                     </footer>
                 </form>

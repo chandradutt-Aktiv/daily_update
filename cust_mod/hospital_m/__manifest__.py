@@ -20,12 +20,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','travel_management','wizard'],
+    'depends': ['base','sale'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'wizard/cust_wizard.xml',
+        'views/doctor_view.xml',
         'views/views.xml',
         'views/templates.xml',
     ],

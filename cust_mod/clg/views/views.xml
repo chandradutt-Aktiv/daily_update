@@ -49,12 +49,15 @@
                             </button>
                         </div>
                         <group>
+                            <field name="name"/>
                             <field name="s_name" required="True"/>
                             <field name="s_rollno" required="True"/>
                             <field name="s_age" required="True"/>
                             <field name="sex" required="True" widget="radio"/>
                             <field name="s_mobile" widget="mobile"/>
                             <field name="s_email" widget="email" required="True"/>
+                            <field name="invo"/>
+                            <field name="aabb"/>
                         </group>
                         <notebook>
                             <page string="search" name="Search">

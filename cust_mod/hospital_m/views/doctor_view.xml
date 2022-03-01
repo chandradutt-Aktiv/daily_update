@@ -1,0 +1,44 @@
+<odoo>
+
+        <record model="ir.ui.view" id="doctor_list">
+            <field name="name">doctor list</field>
+            <field name="model">doctor.doctor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="d_id"/>
+                    <field name="d_name"/>
+                    <field name="d_dob"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="doctor_form">
+            <field name="name">doctor form</field>
+            <field name="model">doctor.doctor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="d_id"/>
+                        <field name="d_name"/>
+                        <field name="gender" force_save="1" />
+                        <field name="d_dob"/>
+                        <field name="d_speciality"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="doctor_action">
+            <field name="name">doctor window</field>
+            <field name="res_model">doctor.doctor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!--        <menuitem name="doctor" id="doctor.menu_1_list" parent="doctor.menu_1"-->
+        <!--                  action="doctor.action_window"/>-->
+        <!--         <menuitem name="doctor" id="menu_3" parent="doctor.action_window"-->
+        <!--                  action="doctor window"/>-->
+
+</odoo>
