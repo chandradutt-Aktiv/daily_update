@@ -7,6 +7,7 @@ class hospital_m(models.Model):
     _name = 'hospital_m.hospital_m'
     _rec_name = 'fname'
     _description = 'hospital_m.hospital_m'
+    _inherit = 'mail.thread','mail.activity.mixin'
 
     # p_id = fields.Integer()
     fname = fields.Char()

@@ -11,7 +11,7 @@
                     <field name="fname"/>
                     <field name="image" widget="image"/>
                     <field name="lname"/>
-                    <field name="gender" />
+                    <field name="gender"/>
                     <field name="mobile"/>
                     <field name="email"/>
                     <field name="dateofbirth"/>
@@ -47,8 +47,14 @@
                         <field name="a_date" placeholder="Select Appoinment Date"/>
                         <field name="doc_name"/>
                         <field name="doc_names"/>
+
                         <!--          <field name="appoinment_date"/>-->
                     </group>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -89,10 +95,10 @@
         <menuitem name="Menu 2" id="hospital_m.menu_2" parent="hospital_m.menu_root"/>
 
         <!-- actions -->
-<!--        <menuitem name="List" id="hospital_m.menu_1_list" parent="hospital_m.menu_1"-->
-<!--                  action="hospital_m.action_window"/>-->
-<!--        <menuitem name="Server to list" id="hospital_m" parent="hospital_m.menu_2"-->
-<!--                  action="hospital_m.action_window"/>-->
+        <!--        <menuitem name="List" id="hospital_m.menu_1_list" parent="hospital_m.menu_1"-->
+        <!--                  action="hospital_m.action_window"/>-->
+        <!--        <menuitem name="Server to list" id="hospital_m" parent="hospital_m.menu_2"-->
+        <!--                  action="hospital_m.action_window"/>-->
         <menuitem name="doc" id="doctor_window" parent="hospital_m.menu_root"
                   action="doctor_action"/>
 
