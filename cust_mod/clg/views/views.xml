@@ -12,7 +12,7 @@
                     <field name="s_age"/>
                     <field name="s_mobile" widget="mobile"/>
                     <field name="s_email" widget="email"/>
-                    <field name="s_image" widget="image" />
+                    <field name="s_image" widget="image"/>
                     <field name="sex"/>
                     <!--                    <field name="dob"/>-->
                 </tree>
@@ -77,7 +77,7 @@
                     <sheet>
                         <group>
 
-                            <field name="s_image" widget="image" />
+                            <field name="s_image" widget="image"/>
                             <field name="sex"/>
                         </group>
 

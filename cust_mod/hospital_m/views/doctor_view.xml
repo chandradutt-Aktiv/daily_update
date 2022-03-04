@@ -9,26 +9,32 @@
                 <field name="d_dob"/>
                 <field name="d_speciality"/>
                 <field name="d_gender" widget="radio"/>
+
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
+                            <field name="img" widget="image"/>
                             <div class="oe_kanban_details">
                                 <ul>
                                     <li>
-                                        Name: <field name="d_name"/>
+                                        Name:
+                                        <field name="d_name" options="{'invisible': [('d_name','!=',True)]}"/>
                                     </li>
                                     <li>
-                                        Speciality: <field name="d_speciality"/>
+                                        Speciality:
+                                        <field name="d_speciality"/>
                                     </li>
                                     <li>
-                                        Date of Birth: <field name="d_dob"/>
+                                        Date of Birth:
+                                        <field name="d_dob"/>
                                     </li>
                                     <li>
-                                        Gender: <field name="d_gender" widget="radio"/>
+                                        Gender:
+                                        <field name="d_gender" widget="radio"/>
                                     </li>
-<!--                                    <li>-->
-<!--                                        Patient name: <field name="patient_name "/>-->
-<!--                                    </li>-->
+                                    <!--                                    <li>-->
+                                    <!--                                        Patient name: <field name="patient_name "/>-->
+                                    <!--                                    </li>-->
                                 </ul>
                             </div>
                         </div>
@@ -43,12 +49,14 @@
         <field name="model">doctor.doctor</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="img" widget="image"/>
                 <field name="d_id"/>
                 <field name="d_name"/>
                 <field name="d_dob"/>
                 <field name="d_speciality"/>
                 <field name="d_gender" widget="radio"/>
-                <field name="patient_name"/>
+                <field name="patient_name" options="{'no_open':True, 'no_create': True}"/>
+                <field name="date"/>
             </tree>
         </field>
     </record>
@@ -59,13 +67,15 @@
         <field name="arch" type="xml">
             <form>
                 <group>
+                    <field name="img" widget="image"/>
                     <field name="d_id"/>
-                    <field name="d_name"/>
+                    <field name="d_name" />
                     <field name="d_dob"/>
                     <field name="d_speciality"/>
                     <field name="d_gender" force_save="1" widget="radio"/>
-                    <field name="patient_name"/>
-<!--                    <field name="check_list" widget="progressbar"/>-->
+                    <field name="patient_name" options="{'no_open':True, 'no_create': True}"/>
+                    <field name="date"/>
+                    <!--                    <field name="check_list" widget="progressbar"/>-->
                 </group>
                 <div class="oe_chatter">
                     <!--                        <field name="message_follower_ids"/>-->

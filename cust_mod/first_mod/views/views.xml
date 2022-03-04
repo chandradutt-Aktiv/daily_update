@@ -1,71 +1,71 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
+    <data>
+        <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="first_mod.list">
-      <field name="name">first_mod list</field>
-      <field name="model">first_mod.first_mod</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name" widget="name" use="required"/>
-          <field name="id" placeholder="enter id" use="required"/>
-          <field name="email" widget="email"/>
-          <field name="value2"/>
-          <field name="city" widget="name"/>
-          <field name="date"/>
-          <field name="time"/>
-          <field name="selection"/>
-          <field name="addimage" widget="image"/>
-          <field name="anhtml"/>
-          <field name="gender" widget="radio" />
-        </tree>
-      </field>
-    </record>
- 
-
-    <!-- actions opening views on models -->
-
-    <record model="ir.actions.act_window" id="first_mod.action_window">
-      <field name="name">first_mod window</field>
-      <field name="res_model">first_mod.first_mod</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+        <record model="ir.ui.view" id="first_mod.list">
+            <field name="name">first_mod list</field>
+            <field name="model">first_mod.first_mod</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" widget="name" use="required"/>
+                    <field name="id" placeholder="enter id" use="required"/>
+                    <field name="email" widget="email"/>
+                    <field name="value2"/>
+                    <field name="city" widget="name"/>
+                    <field name="date"/>
+                    <field name="time"/>
+                    <field name="selection"/>
+                    <field name="addimage" widget="image"/>
+                    <field name="anhtml"/>
+                    <field name="gender" widget="radio"/>
+                </tree>
+            </field>
+        </record>
 
 
-    <!-- server action to the one above -->
+        <!-- actions opening views on models -->
 
-    <record model="ir.actions.server" id="first_mod.action_server">
-      <field name="name">first_mod server</field>
-      <field name="model_id" ref="model_first_mod_first_mod"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
+        <record model="ir.actions.act_window" id="first_mod.action_window">
+            <field name="name">first_mod window</field>
+            <field name="res_model">first_mod.first_mod</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
 
-    <!-- Top menu item -->
+        <!-- server action to the one above -->
 
-    <menuitem name="first_mod" id="first_mod.menu_root"/>
+        <record model="ir.actions.server" id="first_mod.action_server">
+            <field name="name">first_mod server</field>
+            <field name="model_id" ref="model_first_mod_first_mod"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                "type": "ir.actions.act_window",
+                "view_mode": "tree,form",
+                "res_model": model._name,
+                }
+            </field>
+        </record>
 
-    <!-- menu categories -->
 
-    <menuitem name="Menu 1" id="first_mod.menu_1" parent="first_mod.menu_root"/>
-    <menuitem name="Menu 2" id="first_mod.menu_2" parent="first_mod.menu_root"/>
+        <!-- Top menu item -->
 
-    <!-- actions -->
+        <menuitem name="first_mod" id="first_mod.menu_root"/>
 
-    <menuitem name="List" id="first_mod.menu_1_list" parent="first_mod.menu_1"
-              action="first_mod.action_window"/>
-    <menuitem name="Server to list" id="first_mod" parent="first_mod.menu_2"
-              action="first_mod.action_server"/>
+        <!-- menu categories -->
 
-    <menuitem name="sunny" id="first_modd" parent="first_mod.menu_2"
-              action="first_mod.added_wiz"/>
+        <menuitem name="Menu 1" id="first_mod.menu_1" parent="first_mod.menu_root"/>
+        <menuitem name="Menu 2" id="first_mod.menu_2" parent="first_mod.menu_root"/>
 
-  </data>
+        <!-- actions -->
+
+        <menuitem name="List" id="first_mod.menu_1_list" parent="first_mod.menu_1"
+                  action="first_mod.action_window"/>
+        <menuitem name="Server to list" id="first_mod" parent="first_mod.menu_2"
+                  action="first_mod.action_server"/>
+
+        <menuitem name="sunny" id="first_modd" parent="first_mod.menu_2"
+                  action="first_mod.added_wiz"/>
+
+    </data>
 </odoo>
