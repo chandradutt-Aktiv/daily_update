@@ -1,4 +1,5 @@
-d={1:2,2:3}
+d = {1: 2, 2: 3}
+
 if not bool(d):
     print('empty')
 else:

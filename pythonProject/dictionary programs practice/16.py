@@ -1,4 +1,7 @@
-"""Write a Python program to get a dictionary from an object's fields."""
+"""
+Write a Python program to get a dictionary from an object's fields.
+"""
+
 
 class od:
     def __init__(self):
@@ -9,5 +12,7 @@ class od:
     def p(self):
         pass
 
-obj  = od()
+
+obj = od()
+
 print(obj.__dict__)
