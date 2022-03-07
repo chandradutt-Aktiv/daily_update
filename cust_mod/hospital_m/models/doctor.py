@@ -1,4 +1,5 @@
-from odoo import fields,models
+from odoo import fields, models, api
+
 
 class doctor(models.Model):
     _name = 'doctor.doctor'
@@ -20,4 +21,15 @@ class doctor(models.Model):
                            , default=lambda self: fields.datetime.now())
     # check_list = fields.Integer(compute='check_list', string='progress',store=True)
 
+    def name_get(self):
+        res = []
+        for analytic in self:
+            res.append((analytic.d_name, fields))
+        return res
     
+    @api.model
+    def default_get(self, fields):
+        res = super(doctor, self).default_get(fields)
+        print('test.....')
+        res['d_name'] = 'enter name'
+        return res
