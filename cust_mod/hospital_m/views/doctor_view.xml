@@ -17,6 +17,10 @@
                             <div class="oe_kanban_details">
                                 <ul>
                                     <li>
+                                        id:
+                                        <field name="d_id"/>
+                                    </li>
+                                    <li>
                                         Name:
                                         <field name="d_name" options="{'invisible': [('d_name','!=',True)]}"/>
                                     </li>
@@ -50,12 +54,12 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="img" widget="image"/>
-                <field name="d_id"/>
+                <field name="d_id" string="d_id"/>
                 <field name="d_name"/>
                 <field name="d_dob"/>
                 <field name="d_speciality"/>
                 <field name="d_gender" widget="radio"/>
-                <field name="patient_name" options="{'no_open':True, 'no_create': True}"/>
+                <field name="fname" />    <!--options="{'no_open':false, 'no_create': false}" -->
                 <field name="date"/>
             </tree>
         </field>
@@ -71,16 +75,16 @@
                     <field name="d_id"/>
                     <field name="d_name" />
                     <field name="d_dob"/>
-                    <field name="d_speciality"/>
+                    <field name="d_speciality" />
                     <field name="d_gender" force_save="1" widget="radio"/>
-                    <field name="patient_name" options="{'no_open':True, 'no_create': True}"/>
+                    <field name="fname" />   <!--options="{'no_open':false, 'no_create': false}" -->
                     <field name="date"/>
                     <!--                    <field name="check_list" widget="progressbar"/>-->
                 </group>
                 <div class="oe_chatter">
-                    <!--                        <field name="message_follower_ids"/>-->
+<!--                    <field name="message_follower_ids"/>-->
                     <field name="activity_ids"/>
-                    <!--                        <field name="message_ids"/>-->
+                    <field name="message_ids"/>
                 </div>
             </form>
         </field>

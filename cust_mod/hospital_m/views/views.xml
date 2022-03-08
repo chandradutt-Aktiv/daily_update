@@ -20,6 +20,7 @@
                     <field name="blood_group"/>
                     <field name="disease"/>
                     <field name="a_date"/>
+                    <field name="d_speciality"/>
                     <!--          <field name="appoinment_date"/>-->
                 </tree>
             </field>
@@ -52,15 +53,15 @@
                         <field name="bg" force_save="1"/>
                         <field name="disease"/>
                         <field name="a_date" placeholder="Select Appoinment Date"/>
-                        <field name="doc_type" invisible="1"/>
-                        <field name="doc_names" invisible="1"/>
+                        <field name="d_name" />
+                        <field name="d_speciality"/>
                         <!--          <field name="appoinment_date"/>-->
                     </group>
                     <notebook>
                         <page string="Doctor Details" name="Doctor Details">
                             <group>
-                                <field name="doc_type" options="{'no_open':True, 'no_create': True,
-                                'no_edit':True}" widget="selection"/>
+<!--                                <field name="doc_type" options="{'no_open':True, 'no_create': True,-->
+                                <field name="d_speciality"/>
                                 <field name="v_charge"/>
                                 <field name="a_date"/>
                             </group>
@@ -81,7 +82,7 @@
             <field name="arch" type="xml">
                 <search string="patient">
                     <field name="fname"/>
-                    <field name="doc_names"/>
+<!--                    <field name="doc_names"/>-->
                     <group expand="1" string="Group by">
                         <filter name="fname" string="Fname" context="{'group_by':'fname'}"/>
                     </group>

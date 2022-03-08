@@ -26,18 +26,36 @@ class hospital_m(models.Model):
     v_charge = fields.Float()
     disease = fields.Char()
     a_date = fields.Date()
-    doc_type = fields.Many2one('doctor.doctor', string='doctor type')
-    doc_names = fields.Many2many('doctor.doctor', string='doctors')
+    d_name = fields.Many2one('doctor.doctor', string='doctor name')
+    d_speciality = fields.Selection(string="Speciality", related="d_name.d_speciality")
     state = fields.Selection([('patient_details', 'Patient_details'), ('appointment_status', 'Appointment_status')],
                              default="patient_details", string="status_bar")
     # description = fields.Text()
 
+    
+    # def name_get(self):
+    #     res = []
+    #     for rec in self:
+    #         disease1 = rec.doc_type + '----' +rec.disease
+    #         res.append((rec.id, disease1))
+    #     return res
+
+    def name_get(self):
+        return [(record.id, "%s:%s" % (self.lname, record.fname)) for record in self]
     
     @api.onchange('blood_group')
     def bl_g(self):
         for rec in self:
             if(rec.blood_group):
                 rec.bg = rec.blood_group
+
+    @api.model
+    def name_search(self, name, args=None, operator='ilike', limit=100):
+        if args is None:
+            domain = args + ['|', ('d_name', operator, name), ('lname', operator, name)]
+            return super(hospital_m, self).search(domain, limit=limit).name_get()
+        else:
+            return []
 
     @api.depends('value')
     def print(self):
