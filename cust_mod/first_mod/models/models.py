@@ -5,6 +5,7 @@ from odoo import models, fields, api
 
 class first_mod(models.Model):
     _name = 'first_mod.first_mod'
+    _rec_name = 'name'
     _description = 'first_mod.first_mod'
 
     name = fields.Char()
@@ -20,7 +21,40 @@ class first_mod(models.Model):
     anhtml=fields.Html()
     gender=fields.Selection([('male','male'),('female','female')])
     
+    
+    def openwizard(self):
+        return self.env['ir.actions.act_window']._for_xml_id("first_mod.first_mod_added_wiz")
 
+    @api.model
+    def create(self, vals):
+        rtn = super(self).create(vals)
+        # rtn = self.env['ir.actions.act_window'].create(vals)
+        return rtn
+    
+    # @api.model_create_multi
+    # def create(self, vals):
+    #     print("CREATEEEEEEEEEEE", vals)
+    #     res = super(vals).create(vals)
+    #     print("resresres", res)
+    #     return res
+    
+    
+    def unlink(self):
+        print("unlinkunlinkunlink", self)
+        res = super(self).unlink()
+        print("unlinkkkkkkkkkk"
+              "kkkk---res", res)
+        return res
+
+    def write(self, vals):
+        print('write calleddddddddddddddd', vals)
+        # vals.update({
+        #     'name':'Chandradutt'
+        # })
+        res = super().write(vals)
+        print('resresresresresres',res)
+        return res
+    
     @api.depends('Id')
     def _value_pc(self):
         for record in self:

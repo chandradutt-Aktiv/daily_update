@@ -1,11 +1,12 @@
 <odoo>
     <data>
-        <record model="ir.ui.view" id="first_view">
-            <field name="name">first list</field>
+        <record model="ir.ui.view" id="first_view_wiz">
+            <field name="name">first view</field>
             <field name="model">wiz.wiz</field>
             <field name="arch" type="xml">
                 <form>
                     <group>
+                        <field name="name"/>
                         <field name="salary"/>
                     </group>
                     <footer>
@@ -15,12 +16,11 @@
                 </form>
             </field>
         </record>
-        <record id="first_mod.added_wiz" model="ir.actions.act_window">
+        <record id="first_mod_added_wiz" model="ir.actions.act_window">
             <field name="name">clg form2</field>
             <field name="res_model">wiz.wiz</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
-
         </record>
     </data>
 </odoo>

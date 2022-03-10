@@ -75,7 +75,9 @@
                     <field name="d_id"/>
                     <field name="d_name" />
                     <field name="d_dob"/>
+                    <field name="city"/>
                     <field name="d_speciality" />
+<!--                    <field name="ncity"/>-->
                     <field name="d_gender" force_save="1" widget="radio"/>
                     <field name="fname" />   <!--options="{'no_open':false, 'no_create': false}" -->
                     <field name="date"/>
@@ -91,10 +93,26 @@
     </record>
 
 
+    <record model="ir.ui.view" id="doctor_search_view">
+            <field name="name">doctor search</field>
+            <field name="model">doctor.doctor</field>
+            <field name="arch" type="xml">
+                <search string="doctor">
+                    <field name="city"/>
+                    <group expand="1" string="Group By">
+                        <filter string="d_name" name="d_name" context="{'group_by':'d_name'}"/>
+                        <filter string="city" name="group_gender" context="{'group_by':'city'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
     <record model="ir.actions.act_window" id="doctor_action">
         <field name="name">doctor window</field>
         <field name="res_model">doctor.doctor</field>
         <field name="view_mode">tree,form,kanban</field>
+        <field name="search_view" ref="doctor_search_view"/>
     </record>
 
 

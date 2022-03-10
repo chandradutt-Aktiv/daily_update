@@ -25,17 +25,15 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-
         'views/views.xml',
         'wizard/chandradutt_wizard.xml',
         'views/sales.xml',
-
         'views/templates.xml',
-
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
-    'Licence':'LGPL-3'
+    'licence': 'LGPL-3',
+    'application':True
 }

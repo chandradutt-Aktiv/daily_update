@@ -33,4 +33,6 @@
     'demo': [
         'demo/demo.xml',
     ],
+    "licence":"LGPL-3",
+    "application":True
 }
