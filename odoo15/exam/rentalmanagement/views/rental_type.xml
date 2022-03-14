@@ -1,0 +1,33 @@
+<odoo>
+    <record model="ir.ui.view" id="renttype_list">
+        <field name="name">renttype list</field>
+        <field name="model">rental.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="renttype_form">
+        <field name="name">renttype form</field>
+        <field name="model">rental.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="description"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+  <record model="ir.actions.act_window" id="renttype_action">
+        <field name="name">renttype window</field>
+        <field name="res_model">rental.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

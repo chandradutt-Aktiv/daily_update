@@ -1,0 +1,85 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="rentalmanagement.list">
+            <field name="name">rentalmanagement list</field>
+            <field name="model">rentalmanagement.rentalmanagement</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="sdate"/>
+                    <field name="edate"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="rentalmanagement.form">
+            <field name="name">rentalmanagement form</field>
+            <field name="model">rentalmanagement.rentalmanagement</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <!-- Post -->
+<!--                        <field name="state" widget="statusbar" statusbar_visible="Draft, Waiting, Approve" />-->
+                        <field name="state" widget="statusbar" options="{'clickable':'1'}"
+                              />
+                    </header>
+                    <group>
+                        <field name="name"/>
+                        <field name="customer"/>
+                        <field name="rental_type"/>
+                        <field name="sdate"/>
+                        <field name="edate"/>
+                        <field name="price"/>
+                    </group>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="rentalmanagement_search_view">
+            <field name="name">rentalmanagement search</field>
+            <field name="model">rentalmanagement.rentalmanagement</field>
+            <field name="arch" type="xml">
+                <search string="Names">
+                    <field name="name"/>
+<!--                    <field name="doc_names"/>-->
+                    <group expand="1" string="Group by">
+                        <filter name="name" string="name" context="{'group_by':'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="rentalmanagement_action_window">
+            <field name="name">rentalmanagement window</field>
+            <field name="res_model">rentalmanagement.rentalmanagement</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+        <!-- Top menu item -->
+
+        <menuitem name="rentalmanagement" id="rentalmanagement_menu_root"/>
+        <menuitem name="Rental Management" parent="rentalmanagement_menu_root" sequence="1" id="rentalmanagement_menu_1" action="rentalmanagement_action_window"/>
+
+        <!-- menu categories -->
+
+<!--        <menuitem name="product template" id="rentalmanagement.menu_1" parent="rentalmanagement.menu_root"/>-->
+        <menuitem name="rental_type" id="rentalmanagement_menu_2" parent="rentalmanagement_menu_root" action="renttype_action"/>
+
+        <!-- actions -->
+
+<!--        <menuitem name="abc" id="rentalmanagement.menu_1_list" parent="rentalmanagement.menu_1"-->
+<!--                  action="p_template_action"/>-->
+<!--        <menuitem name="xyz" id="rentalmanagement" parent="rentalmanagement.menu_2"-->
+<!--                  action="renttype_action"/>-->
+
+        <!--    <menuitem name="rentalmod" id="rmmod window" parent="rentalmanagement.menu_root"/>-->
+
+    </data>
+</odoo>

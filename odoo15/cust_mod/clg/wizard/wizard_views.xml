@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="clg_form">
+            <field name="name">clg form</field>
+            <field name="model">wiz.wiz</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="fees"/>
+                        <field name="paid"/>
+                    </group>
+                    <footer>
+                        <button name="print1" string="Print" type="object"/>
+                        <button name="cancel" string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="clg_added_wiz" model="ir.actions.act_window">
+            <field name="name">clg form</field>
+            <field name="res_model">wiz.wiz</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!--        <record id="clg.added_wiz" model="ir.actions.act_window">-->
+        <!--            <field name="name">clg_form</field>-->
+        <!--            <field name="res_model">wiz.wiz</field>-->
+        <!--            <field name="view_mode">form</field>-->
+        <!--            <field name="target">new</field>-->
+        <!--        </record>-->
+    </data>
+</odoo>
