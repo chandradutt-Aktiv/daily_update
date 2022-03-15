@@ -6,8 +6,11 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="name"/>
-                        <field name="salary"/>
+                        <field name="customer"/>
+                        <field name="quotation_template"/>
+                        <field name="order_date"/>
+                        <field name="pricelist"/>
+                        <field name="payment_terms"/>
                     </group>
                     <footer>
                         <button name="playing" string="Play" type="object"/>

@@ -5,6 +5,6 @@ class sales(models.Model):
 
     # id1= fields.Integer()
     
-    
+    #
     # def name_get(self):
     #     return [(record.id, "%s:%s" % (record.name, record.phone)) for record in self]

@@ -1,4 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_first_mod_first_mod,first_mod.first_mod,model_first_mod_first_mod,base.group_user,1,1,1,1
 access_wiz_wiz,wiz.wiz,model_wiz_wiz,base.group_user,1,1,1,1
-

@@ -48,9 +48,9 @@ class first_mod(models.Model):
 
     def write(self, vals):
         print('write calleddddddddddddddd', vals)
-        # vals.update({
-        #     'name':'Chandradutt'
-        # })
+        vals.update({
+            'name':'Chandradutt'
+        })
         res = super().write(vals)
         print('resresresresresres',res)
         return res

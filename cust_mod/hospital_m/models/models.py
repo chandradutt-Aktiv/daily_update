@@ -49,14 +49,7 @@ class hospital_m(models.Model):
             if(rec.blood_group):
                 rec.bg = rec.blood_group
 
-    # @api.model
-    # def name_search(self, name, args=None, operator='ilike', limit=100):
-    #     if args is None:
-    #         domain = args + ['|', ('d_name', operator, name), ('lname', operator, name)]
-    #         return super(hospital_m, self).search(domain, limit=limit).name_get()
-    #     else:
-    #         return []
-
+    
     @api.depends('value')
     def print(self):
         print('hello user')
