@@ -7,7 +7,7 @@ class clg(models.Model):
     _name = 'clg.clg'
     _description = 'clg.clg'
     _rec_name = 's_name'
-    #_inherit = 'travel_management.travel_management'
+    # _inherit = 'travel_management.travel_management'
 
     name = fields.Char()
     s_name = fields.Char()

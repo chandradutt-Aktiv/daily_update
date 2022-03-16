@@ -43,21 +43,30 @@ class sales(models.Model):
         br = self.env['sale.order'].browse(['phone'])
         print('browseeeeeeeeeeeeeeee', br)
         #     result.append((rec.id, '%s ## %s' % (rec.name, rec.payment_term_id)))
-        return [(record.id, "%s:%s" % (record.name, record.ref)) for record in self]
+        # return [(record.id, "%s : %s" % (record.name, record.ref)) for record in self]
+        return [(record.id, f"{record.name} - {record.phone}") for record in self]
         # return result
 
 
 class Sale_Order_Inherited(models.Model):
     _inherit = 'sale.order'
     
-    Age = fields.Char()
-    Birth_Date = fields.Date(string='Birth Date')
-
-    @api.depends('Birth_Date')
+    age = fields.Float(compute='Calculate_Age')
+    Birth_Date = fields.Date(string='Birth Date', default=date.today())
+    todays_date = fields.Date(default=date.today())
+    
+    def search_data(self):
+        res = self.env['sale.order'].search([("payment_term_id","!=",False)]).read(['payment_term_id'])
+        print(res, "---------------------------------")
+        return res
+    
+    @api.depends('Birth_Date', 'todays_date')
     def Calculate_Age(self):
-        todays_date = datetime.datetime.now()
-        Age = date(todays_date) - self.Birth_Date
-        return Age
+        print(type(self.todays_date), type(self.Birth_Date), "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2")
+        if self.Birth_Date:
+            self.age = (self.todays_date-self.Birth_Date).days // 365
+        else:
+            self.age = 0
     
     def action_confirm(self):
         print('action confirm calledddddddddddd')

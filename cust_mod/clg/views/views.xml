@@ -44,8 +44,7 @@
                         <div class="oe_button_box" name="button_box">
                             <button name="students" type="object" class="btn btn-primary"
                                     icon="fa-copy">
-                                <!--                                <field name="stude" class="o_stat_value"/>-->
-                                <!--                                <span class="o_sat_text">students</span>-->
+                                <span class="o_sat_text">students</span>
                             </button>
                         </div>
                         <group>

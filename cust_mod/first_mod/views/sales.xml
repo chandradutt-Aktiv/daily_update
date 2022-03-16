@@ -9,13 +9,21 @@
             <xpath expr="//field[@name='partner_id']" position="after">
 
                 <field name="Birth_Date" />
-                <field name="Age"/>
+                <field name="age"/>
                 <!--                <header>-->
 <!--                <button name="open wizard" string="open wizard" type="object"/>-->
                 <!--                </header>-->
 <!--                <field name="mobile" string="mobile" widget="phone"/>-->
 <!--                <field name="email" string="email" widget="email"/>-->
+<!--                <button name="%(first_mod_added_wiz)d" type="action" string="open wizard" />-->
+            </xpath>
+
+            <xpath expr="//div[hasclass('oe_button_box')]" position="before">
                 <button name="%(first_mod_added_wiz)d" type="action" string="open wizard" />
+            </xpath>
+
+            <xpath expr="//field[@name ='partner_id']" position="after">
+                <button name="search_data" type="object" string="perform read operation" />
             </xpath>
         </field>
     </record>
