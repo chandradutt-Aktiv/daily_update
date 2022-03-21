@@ -2,3 +2,4 @@
 
 from . import models
 from . import sales
+from . import inherit_settings

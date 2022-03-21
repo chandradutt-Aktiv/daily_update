@@ -28,14 +28,13 @@ class doctor(models.Model):
     @api.model
     def default_get(self, fields):
         res = super(doctor, self).default_get(fields)
-        print('test.....')
         res['d_name'] = 'enter name'
         return res
 
     @api.model
     def _name_search(self, name='', args=None, operator='=', limit=100, name_get_uid=None):
         args = args or []
-        domain=[]
+        domain = []
         if name:
             domain = args + ['|', ('d_name', operator, name), ('city', operator, name)]
         return self._search(domain, limit=limit, access_rights_uid=name_get_uid)

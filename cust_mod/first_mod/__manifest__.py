@@ -20,12 +20,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','sale'],
+    'depends': ['base', 'sale'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'wizard/wizard_view.xml',
+        'views/inherit_settings.xml',
         'views/views.xml',
         'views/sales.xml',
         'views/templates.xml',
@@ -34,5 +35,6 @@
     'demo': [
         'demo/demo.xml',
     ],
-    "licence":"LGPL-3"
+    'licence': 'LGPL-3',
+    'application': True
 }
