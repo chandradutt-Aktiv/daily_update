@@ -6,53 +6,20 @@
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('settings')]//div[@id='languages']" position="before">
                 <h2>Custom Test</h2>
-                <div class="row mt16 o_settings_container" name="catalog_setting_container">
-                    <div class="col-12 col-lg-6 o_setting_box">
-                        <div class="o_setting_left_pane">
-                            <field name="bool"/>
-                        </div>
-                        <div class="o_setting_right_pane">
-                            <label for="bool"/>
-                            <div class="text-muted">
-                            </div>
+                <div class="col-12 col-lg-6 o_setting_box">
+                    <label for="bool"/>
+                    <div class="text-muted">
+                        Click This to view another field
+                    </div>
+                    <field name="bool"/>
+                </div>
+                <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible':[('bool','=',False)]}">
+                    <div class="o_setting_left_pane">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <field name="m2o"/>
+                            <field name="html" widget="html"/>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible':[('bool', '=', False)]}">
-                        <label for="html"/>
-                        <field name="html"/>
-                        <div class="text-muted">
-                        </div>
-                    </div>
-
-                    <!--                    <div class="col-12 col-lg-6 o_setting_box">-->
-                    <!--                        <label for="bool"/>-->
-                    <!--                        <field name="bool"/>-->
-                    <!--                        <div class="text-muted">-->
-                    <!--                            Click This to view another field-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="col-12 col-lg-6 o_setting_box">-->
-                    <!--                        <div class="o_setting_left_pane">-->
-                    <!--                            <field name="html"-->
-                    <!--                                   attrs="{'invisible':[('bool','=',False)],'required':[('bool','=',False)]}"/>-->
-                    <!--                            <div class="o_setting_right_pane">-->
-                    <!--                                <label for="html" string="Html Field"/>-->
-                    <!--                                <div class="text-muted">-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="col-12 col-lg-6 o_setting_box">-->
-                    <!--&lt;!&ndash;                            <div class="o_setting_left_pane">&ndash;&gt;-->
-                    <!--&lt;!&ndash;                                <field name="is_active"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;                            </div>&ndash;&gt;-->
-                    <!--                            <div class="o_setting_right_pane">-->
-                    <!--                                <label for="is_active" string="Test Char"/>-->
-                    <!--                                <div class="text-muted">-->
-                    <!--                                    Direct check active field-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                    </div>-->
                 </div>
             </xpath>
         </field>

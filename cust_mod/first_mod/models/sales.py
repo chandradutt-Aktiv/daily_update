@@ -44,7 +44,7 @@ class sales(models.Model):
         print('browseeeeeeeeeeeeeeee', br)
         #     result.append((rec.id, '%s ## %s' % (rec.name, rec.payment_term_id)))
         # return [(record.id, "%s : %s" % (record.name, record.ref)) for record in self]
-        return [(record.id, f"{record.name} - {record.phone}") for record in self]
+        return [(record.id, f"{record.name} - {record.phone} + {record.email}") for record in self]
         # return result
 
 
