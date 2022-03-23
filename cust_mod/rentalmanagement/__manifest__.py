@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','product','mail'],
+    'depends': ['base', 'product', 'mail'],
 
     # always loaded
     'data': [
@@ -28,11 +28,13 @@
         'views/p_template.xml',
         'views/rental_type.xml',
         'views/views.xml',
+        'report/rental_details.xml',
+        'report/report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
-    'licence':'LGPL-3',
-    'application':True
+    'licence': 'LGPL-3',
+    'application': True
 }

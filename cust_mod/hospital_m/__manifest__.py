@@ -28,6 +28,8 @@
         'views/doctor_view.xml',
         'views/views.xml',
         'views/templates.xml',
+        'report/patient_details.xml',
+        'report/report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

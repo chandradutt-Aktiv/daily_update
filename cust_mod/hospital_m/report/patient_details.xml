@@ -1,0 +1,18 @@
+<odoo>
+    <template id="report_patient_details">
+        <t t-call="web.html_container" >
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    First name: <span t-field="o.fname"/><br/>
+                    Lirst name: <span t-field="o.lname"/><br/>
+                    Gender: <span t-field="o.gender"/><br/>
+                    Mobile: <span t-field="o.mobile"/><br/>
+                    Date of Birth: <span t-field="o.dateofbirth"/><br/>
+                    Address: <span t-field="o.address"/><br/>
+                    Visiting Charge: <span t-field="o.v_charge"/><br/>
+                    Blood Group: <span t-field="o.blood_group"/><br/>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

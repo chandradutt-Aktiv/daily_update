@@ -1,7 +1,7 @@
 <odoo>
     <data>
         <!-- explicit list view definition -->
-<!--       ************* List View ***************-->
+        <!--       ************* List View ***************-->
         <record model="ir.ui.view" id="hospital_m.list">
             <field name="name">hospital_m list</field>
             <field name="model">hospital_m.hospital_m</field>
@@ -28,12 +28,17 @@
         </record>
 
 
-<!--       ************* Form View ***************-->
+        <!--       ************* Form View ***************-->
         <record model="ir.ui.view" id="hospital_m.form">
             <field name="name">hospital_m form</field>
             <field name="model">hospital_m.hospital_m</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="patient_details,appointment_status"
+                               options="{'clickable':'1'}"/>
+                    </header>
                     <sheet>
                         <div class="oe_button_box" name="button_box">
                             <button name="associate_account" class="btn btn-primary"
@@ -45,12 +50,6 @@
                                 <field string="Appointment Date" name="a_date" widget="date"/>
                             </button>
                         </div>
-                        <header>
-                            <field name="state" widget="statusbar"
-                                   statusbar_visible="patient_details,appointment_status"
-                                   options="{'clickable':'1'}"/>
-                        </header>
-
                         <group>
                             <!--            <field name="p_id" placeholder="Patient Id"/>-->
                             <field name="fname" placeholder="First Name"/>
@@ -104,7 +103,7 @@
         </record>
 
 
-<!--******************Search View*****************-->
+        <!--******************Search View*****************-->
         <record model="ir.ui.view" id="hospital_m_search_view">
             <field name="name">hospital_m search</field>
             <field name="model">hospital_m.hospital_m</field>
