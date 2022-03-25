@@ -6,6 +6,11 @@
 
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='state']" position="after">
+                <button name="%(first_mod_added_wiz)d" type="action" string="open wizard"/>
+            </xpath>
+
             <xpath expr="//field[@name='partner_id']" position="after">
 
                 <field name="Birth_Date" />

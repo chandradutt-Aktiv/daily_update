@@ -6,7 +6,7 @@
             <field name="name">hospital_m list</field>
             <field name="model">hospital_m.hospital_m</field>
             <field name="arch" type="xml">
-                <list>
+                <tree>
                     <!--          <field name="p_id"/>-->
                     <field name="fname"/>
                     <field name="lname"/>
@@ -21,9 +21,9 @@
                     <field name="disease"/>
                     <field name="a_date"/>
                     <field name="d_speciality"/>
-                    <field name="s_count"/>
-                    <!--          <field name="appoinment_date"/>-->
-                </list>
+<!--                    <field name="s_count"/>-->
+<!--                              <field name="appoinment_date"/>-->
+                </tree>
             </field>
         </record>
 
@@ -109,7 +109,9 @@
             <field name="model">hospital_m.hospital_m</field>
             <field name="arch" type="xml">
                 <search string="patient">
-                    <field name="fname"/>
+                    <separator/>
+                    <filter string="gender" name="gender" domain="[('gender','=','male')]"/>
+<!--                     <filter string="gender" name="gender" domain="[('gender','=','male')]"/>-->
                     <!--                    <field name="doc_names"/>-->
                     <group expand="1" string="Group by">
                         <filter name="fname" string="Fname" context="{'group_by':'fname'}"/>

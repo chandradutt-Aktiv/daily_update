@@ -20,8 +20,6 @@ class sales(models.Model):
     #         rec.email = rec.partner_id.email
     #         rec.mobile = rec.partner_id.phone
     
-    
-    
     @api.constrains('payment_term_id', 'partner_id')
     def _constraint_methods(self):
         for rec in self:
@@ -44,11 +42,14 @@ class sales(models.Model):
         print('browseeeeeeeeeeeeeeee', br)
         #     result.append((rec.id, '%s ## %s' % (rec.name, rec.payment_term_id)))
         # return [(record.id, "%s : %s" % (record.name, record.ref)) for record in self]
-        return [(record.id, f"{record.name} - {record.phone} + {record.email}") for record in self]
+        return [(record.id, f"{record.name} - {record.phone} +  {record.email}") for record in self]
         # return result
 
 
 class Sale_Order_Inherited(models.Model):
+    """
+    Inheriting sale order new class
+    """
     _inherit = 'sale.order'
     
     age = fields.Float(compute='Calculate_Age')
@@ -62,6 +63,9 @@ class Sale_Order_Inherited(models.Model):
     
     @api.depends('Birth_Date', 'todays_date')
     def Calculate_Age(self):
+        """
+        calculate Age from date of birth
+        """
         print(type(self.todays_date), type(self.Birth_Date), "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2")
         if self.Birth_Date:
             self.age = (self.todays_date-self.Birth_Date).days // 365
@@ -69,6 +73,9 @@ class Sale_Order_Inherited(models.Model):
             self.age = 0
     
     def action_confirm(self):
+        """
+        In saleorder Order lines are more than 3
+        """
         print('action confirm calledddddddddddd')
         res = super(Sale_Order_Inherited, self).action_confirm()
         for rec in self:

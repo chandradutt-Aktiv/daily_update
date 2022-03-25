@@ -1,4 +1,5 @@
 <odoo>
+<!--*************************Kanban View****************************-->
     <record id="doctor_kanban" model="ir.ui.view">
         <field name="name">doctor.doctor_kanban</field>
         <field name="model">doctor.doctor</field>
@@ -48,6 +49,7 @@
         </field>
     </record>
 
+<!--**********************List View**************************-->
     <record model="ir.ui.view" id="doctor_list">
         <field name="name">doctor list</field>
         <field name="model">doctor.doctor</field>
@@ -65,6 +67,7 @@
         </field>
     </record>
 
+<!-- ***********************Form View*************************-->
     <record model="ir.ui.view" id="doctor_form">
         <field name="name">doctor form</field>
         <field name="model">doctor.doctor</field>
@@ -92,7 +95,7 @@
         </field>
     </record>
 
-
+<!--*************************Search View**************************-->
     <record model="ir.ui.view" id="doctor_search_view">
             <field name="name">doctor search</field>
             <field name="model">doctor.doctor</field>

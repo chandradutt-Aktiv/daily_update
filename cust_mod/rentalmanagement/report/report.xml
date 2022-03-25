@@ -4,9 +4,10 @@
         <field name="name">Rental Details</field>
         <field name="model">rentalmanagement.rentalmanagement</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">rentalmanagement.report_rental_detail</field>
-        <field name="report_file">rentalmanagement.report_rental_detail</field>
+        <field name="report_name">rentalmanagement.report_rental_details</field>
+        <field name="report_file">rentalmanagement.report_rental_details</field>
         <field name="binding_model_id" ref="model_rentalmanagement_rentalmanagement"/>
         <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="rentalmanagement.rental_paper_template"/>
     </record>
 </odoo>

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-
+"""
+Patient details
+"""
 from odoo import models, fields, api
 
 
@@ -35,12 +37,19 @@ class hospital_m(models.Model):
 	                         default="patient_details", string="status_bar")
 	Medicine = fields.One2many('hospital.medicine', 'm2o_medicine', string='Medicines')
 	s_count = fields.Integer(compute='associate_account')
+	# doc_name = fields.Many2one('doctor.doctor', string='doctor name')
 	
 	def associate_account(self):
+		"""
+		on smart button display count of records
+		"""
 		for partner in self:
 			partner.s_count = super(hospital_m, self).search_count([])
 	
 	def name_get(self):
+		"""
+		getting first and last name
+		"""
 		if self.lname:
 			return [(record.id, f"{self.fname} -- {self.lname}") for record in self]
 		else:
@@ -55,13 +64,13 @@ class hospital_m(models.Model):
 			if rec.blood_group:
 				rec.bg = rec.blood_group
 	
-	@api.depends('value')
-	def print(self):
-		print('hello user')
+	# @api.depends('value')
+	# def print(self):
+	# 	print('hello user')
 	
-	def _value_pc(self):
-		for record in self:
-			record.value2 = float(record.value) / 100
+	# def _value_pc(self):
+	# 	for record in self:
+	# 		record.value2 = float(record.value) / 100
 	
 	@api.model
 	def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):

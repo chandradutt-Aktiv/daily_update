@@ -18,10 +18,9 @@ class rentalmanagement(models.Model):
     state = fields.Selection([('draft', 'Draft'), ('waiting', 'Waiting'),
                              ('approve', 'Approve'), ('cancel', 'Cancel')], default="waiting")
     
-    
-    @api.constrains('sdate','edate')
+    @api.constrains('sdate', 'edate')
     def datechangeval(self):
-        if(self.sdate > self.edate):
+        if self.sdate > self.edate:
             raise 'start date cannot be greater than end date'
 
     # @api.depends('value')

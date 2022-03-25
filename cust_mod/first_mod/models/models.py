@@ -21,7 +21,6 @@ class first_mod(models.Model):
     anhtml=fields.Html()
     gender=fields.Selection([('male','male'),('female','female')])
     
-    
     def openwizard(self):
         return self.env['ir.actions.act_window']._for_xml_id("first_mod.first_mod_added_wiz")
 
