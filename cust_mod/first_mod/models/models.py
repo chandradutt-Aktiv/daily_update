@@ -13,20 +13,21 @@ class first_mod(models.Model):
     email = fields.Char()
     value2 = fields.Float(compute="_value_pc", store=True)
     description = fields.Text()
-    city=fields.Char()
-    date=fields.Datetime()
-    time=fields.Date()
-    selection=fields.Selection([('hello','abcd'),('xyz','xyz')])
-    addimage=fields.Binary()
-    anhtml=fields.Html()
-    gender=fields.Selection([('male','male'),('female','female')])
+    city = fields.Char()
+    date = fields.Datetime()
+    time = fields.Date()
+    selection = fields.Selection([('hello','abcd'),('xyz','xyz')])
+    addimage = fields.Binary()
+    anhtml = fields.Html()
+    gender = fields.Selection([('male', 'male'), ('female', 'female')])
+    # customer_rank = fields.Many2many('sale.order')
     
     def openwizard(self):
         return self.env['ir.actions.act_window']._for_xml_id("first_mod.first_mod_added_wiz")
 
     @api.model
     def create(self, vals):
-        rtn = super(self).create(vals)
+        rtn = super().create(vals)
         # rtn = self.env['ir.actions.act_window'].create(vals)
         return rtn
     
@@ -48,7 +49,7 @@ class first_mod(models.Model):
     def write(self, vals):
         print('write calleddddddddddddddd', vals)
         vals.update({
-            'name':'Chandradutt'
+            'name': 'Chandradutt'
         })
         res = super().write(vals)
         print('resresresresresres',res)

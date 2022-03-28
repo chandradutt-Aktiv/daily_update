@@ -9,9 +9,9 @@
                 <tree>
                     <field name="name" widget="name" use="required"/>
                     <field name="id" placeholder="enter id" use="required"/>
-                    <field name="email" widget="email"/>
+<!--                    <field name="email" widget="email"/>-->
                     <field name="value2"/>
-                    <field name="city" widget="name"/>
+<!--                    <field name="city"/>-->
                     <field name="date"/>
                     <field name="time"/>
                     <field name="selection"/>
@@ -34,13 +34,14 @@
                             <field name="id" placeholder="enter id" use="required"/>
                             <field name="email" widget="email"/>
                             <field name="value2"/>
-                            <field name="city" widget="name"/>
+                            <field name="city"/>
                             <field name="date"/>
                             <field name="time"/>
                             <field name="selection"/>
                             <field name="addimage" widget="image"/>
                             <field name="anhtml"/>
                             <field name="gender" widget="radio"/>
+<!--                            <field name="customer_rank" widget="many2many"/>-->
                             <button name="openwizard" string="open wizard button" type="object"/>
                         </group>
                     </group>

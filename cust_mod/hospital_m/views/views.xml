@@ -41,13 +41,12 @@
                     </header>
                     <sheet>
                         <div class="oe_button_box" name="button_box">
-                            <button name="associate_account" class="btn btn-primary"
-                                    icon="fa-dollar">patient count
-
-                                <field name="s_count" string="patient count"/>
-                            </button>
                             <button class="btn btn-primary" icon="fa-calendar">
                                 <field string="Appointment Date" name="a_date" widget="date"/>
+                            </button>
+                            <button name="associate_account" class="btn btn-primary"
+                                    icon="fa-dollar">Charge:
+                                <field name="v_charge" string="Visiting charge"/>
                             </button>
                         </div>
                         <group>

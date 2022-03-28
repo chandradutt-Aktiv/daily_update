@@ -11,14 +11,30 @@ class sales(models.Model):
     """
     _inherit = 'res.partner'
     
-    # mobile = fields.Char()
-    # email = fields.Char()
-    
-    # @api.onchange('partner_id')
-    # def _onchange_partner_id(self):
+    mobile = fields.Char()
+    email = fields.Char()
+    # customer_rank = fields.Many2many('sale.order')
+    #
+    # # @api.onchange('customer_rank')
+    # def write(self, vals):
+    #     # print('customer rank greater than 5 calleddddddddddddddddddddddddddddd')
+    #     if self.customer_rank > 5:
+    #         print('customer rank greater than 5 calleddddddddddddddddddddddddddddd')
+    #         # self.update({'customer_rank': 'Best Customer'})
+    #         # res = super().write(vals)
+    #         # return res
+    #
+    # def customer(self):
+    #     vals = {'customer_rank': []}
     #     for rec in self:
-    #         rec.email = rec.partner_id.email
-    #         rec.mobile = rec.partner_id.phone
+    #         vals['customer_rank'].append([1, self.customer_rank, {self.customer_rank: 'Good customer'}])
+    #     return rec
+    
+    @api.onchange('partner_id')
+    def _onchange_partner_id(self):
+        for rec in self:
+            rec.email = rec.partner_id.email
+            rec.mobile = rec.partner_id.phone
     
     @api.constrains('payment_term_id', 'partner_id')
     def _constraint_methods(self):
@@ -36,12 +52,8 @@ class sales(models.Model):
         return self._search(domain + args, limit=limit, access_rights_uid=name_get_uid)
     
     def name_get(self):
-        # result = []
-        # for rec in self:
         br = self.env['sale.order'].browse(['phone'])
         print('browseeeeeeeeeeeeeeee', br)
-        #     result.append((rec.id, '%s ## %s' % (rec.name, rec.payment_term_id)))
-        # return [(record.id, "%s : %s" % (record.name, record.ref)) for record in self]
         return [(record.id, f"{record.name} - {record.phone} +  {record.email}") for record in self]
         # return result
 

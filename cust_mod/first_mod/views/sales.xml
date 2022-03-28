@@ -15,6 +15,7 @@
 
                 <field name="Birth_Date" />
                 <field name="age"/>
+<!--                <field name="customer_rank" widget="many2many_tags"/>-->
                 <!--                <header>-->
 <!--                <button name="open wizard" string="open wizard" type="object"/>-->
                 <!--                </header>-->
