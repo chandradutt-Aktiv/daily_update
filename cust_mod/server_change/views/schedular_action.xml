@@ -11,17 +11,5 @@
         <field name="numbercall">-1</field>
         <field name="doall" eval="False"/>
     </record>
-<!--        <record id="demo_cron" model="ir.cron">-->
-<!--            <field name="name">Change state</field>-->
-<!--            <field name="model_id" ref="model_sale_order"/>-->
-<!--            <field name="binding_model_id" ref="model_sale_order"/>-->
-<!--            <field name="state">code</field>-->
-<!--            <field name="code">server_change.test()</field>-->
-<!--            <field name="user_id" ref="base.user_root"/>-->
-<!--            <field name='interval_number'>1</field>-->
-<!--            <field name='interval_type'>minutes</field>-->
-<!--            <field name="numbercall">-1</field>-->
-<!--            <field name="doall" eval="False"/>-->
-<!--        </record>-->
     </data>
 </odoo>

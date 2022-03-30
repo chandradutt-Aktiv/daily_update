@@ -1,5 +1,8 @@
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
 {
-    'name': "clg",
+    'name': "dhruv",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -19,14 +22,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','sale'],
+    'depends': ['base','product','contacts','sale'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'wizard2/views2.xml',
-        'wizard/wizard_views.xml',
-        'views/salex.xml',
+        # 'views/inheri.xml',
+        'views/sale_special.xml',
         'views/views.xml',
         'views/templates.xml',
     ],
@@ -34,7 +36,7 @@
     'demo': [
         'demo/demo.xml',
     ],
-    'licence':'LGPL-3',
-    'application':True
+    'license': 'LGPL-3',
+    "application": True
+
 }
-# -*- coding: utf-8 -*-

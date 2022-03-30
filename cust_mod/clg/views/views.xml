@@ -133,8 +133,8 @@
 
         <menuitem name="wizzz" id="menu_3" parent="clg.menu_root"
                   action="clg_added_wiz"/>
-        <menuitem name="wizard2" id="menu34" parent="clg.menu_2"
-                  action="clg.added_wiz2"/>
+<!--        <menuitem name="wizard2" id="menu34" parent="clg.menu_2"-->
+<!--                  action="clg.added_wiz2"/>-->
 
     </data>
 </odoo>

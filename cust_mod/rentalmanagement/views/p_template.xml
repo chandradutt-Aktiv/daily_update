@@ -1,4 +1,4 @@
-<odoo>
+ <odoo>
     <record model="ir.ui.view" id="p_template_list">
         <field name="name">p_template list</field>
         <field name="model">product.template</field>

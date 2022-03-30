@@ -23,12 +23,19 @@ class sales(models.Model):
     #         # self.update({'customer_rank': 'Best Customer'})
     #         # res = super().write(vals)
     #         # return res
-    #
-    # def customer(self):
-    #     vals = {'customer_rank': []}
-    #     for rec in self:
-    #         vals['customer_rank'].append([1, self.customer_rank, {self.customer_rank: 'Good customer'}])
-    #     return rec
+    
+    
+    def customerrank(self):
+        for rec in self:
+            if rec.customer_rank:
+                print('customer rank available')
+            else:
+                print('Not availableeeeeeeeeeeeeeeeee')
+        
+        # vals = {'customer_rank': []}
+        # for rec in self:
+        #     vals['customer_rank'].append([1, self.customer_rank, {self.customer_rank: 'Good customer'}])
+        # return rec
     
     @api.onchange('partner_id')
     def _onchange_partner_id(self):
