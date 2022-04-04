@@ -2,31 +2,34 @@
     <data>
         <!-- explicit list view definition -->
 
-        <record model="ir.ui.view" id="clg_list">
-            <field name="name">clg list</field>
-            <field name="model">clg.clg</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="s_name"/>
-                    <field name="s_rollno"/>
-                    <field name="s_age"/>
-                    <field name="s_mobile" widget="mobile"/>
-                    <field name="s_email" widget="email"/>
-                    <field name="s_image" widget="image"/>
-                    <field name="sex"/>
-                    <!--                    <field name="dob"/>-->
-                </tree>
-            </field>
-        </record>
+<!--        <record model="ir.ui.view" id="clg_list">-->
+<!--            <field name="name">clg list</field>-->
+<!--            <field name="model">clg.clg</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree>-->
+<!--                    <field name="s_name"/>-->
+<!--                    <field name="s_rollno"/>-->
+<!--                    <field name="s_age"/>-->
+<!--                    <field name="s_mobile" widget="mobile"/>-->
+<!--                    <field name="s_email" widget="email"/>-->
+<!--                    <field name="s_image" widget="image"/>-->
+<!--                    <field name="sex"/>-->
+<!--                    &lt;!&ndash;                    <field name="dob"/>&ndash;&gt;-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
 
         <record model="ir.ui.view" id="clg_tree">
             <field name="name">clg tree</field>
             <field name="model">clg.clg</field>
             <field name="arch" type="xml">
-                <tree>
-                    <field name="s_name" required="True"/>
+                <tree decoration-muted="state == 'sent'">
+                    <field name="s_name" decoration-bf="1"/>
                     <field name="s_rollno" required="True"/>
                     <field name="s_age" required="True"/>
+                    <field name="state" widget="badge" decoration-success="state == 'sent' or state == 'done'" options="{'clickable':'1'}"
+                               statusbar_visible="to_send,sent,to_cancel"/>
+                    <field name="fees" sum="total fees"/>
                 </tree>
             </field>
         </record>
@@ -49,12 +52,13 @@
                         </div>
                         <group>
                             <field name="name"/>
-                            <field name="s_name" required="True"/>
+                            <field name="s_name" decoration-bf="1"/>
                             <field name="s_rollno" required="True"/>
                             <field name="s_age" required="True"/>
                             <field name="sex" required="True" widget="radio"/>
                             <field name="s_mobile" widget="mobile"/>
                             <field name="s_email" widget="email" required="True"/>
+                            <field name="fees" sum="total fees"/>
                             <field name="invo"/>
                             <field name="aabb"/>
                         </group>

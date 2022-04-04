@@ -1,4 +1,4 @@
-<odoo>
+<!--<odoo>-->
 <!--    <data>-->
 <!--        <record model="ir.ui.view" id="clg_form2">-->
 <!--            <field name="name">clg form2</field>-->
@@ -22,4 +22,4 @@
 <!--            <field name="target">new</field>-->
 <!--        </record>-->
 <!--    </data>-->
-</odoo>
+<!--</odoo>-->

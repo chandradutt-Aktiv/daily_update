@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eec529b8-4b72-4e26-9101-3ff7d46c91eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../chandradutt_mod/models/sales.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chandradutt_mod/views/sales.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chandradutt_mod/wizard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chandradutt_mod/wizard/chandradutt_wizard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chandradutt_mod/wizard/chandradutt_wizard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clg/data/res_partner_category_data.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clg/models/salex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clg/views/salex.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clg/wizard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clg/wizard/clg_wizard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clg/wizard/wizard_views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clg/wizard2/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clg/wizard2/clg2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../clg/wizard2/views2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/controllers/controllers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/demo/demo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/models/inheri.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/models/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/models/sale_special.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/models/templates.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/security/ir.model.access.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/views/inheri.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/views/sale_special.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/views/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dhruv/views/views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../first_mod/models/inherit_settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../first_mod/models/sales.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../first_mod/views/inherit_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../first_mod/views/sales.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../first_mod/wizard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../first_mod/wizard/f_wizard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../first_mod/wizard/wizard_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hospital_m/models/doctor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hospital_m/report/patient_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hospital_m/report/report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hospital_m/views/doctor_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/controllers/controllers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/demo/demo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/models/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/models/p_template.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/models/rental_type.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/report/Paper_Template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/report/rental_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/report/report.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/security/ir.model.access.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/views/p_template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/views/rental_type.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rentalmanagement/views/views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server_change/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server_change/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server_change/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server_change/models/res_partner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server_change/models/schedular_action.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server_change/security/ir.model.access.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server_change/views/res_partner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server_change/views/schedular_action.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/controllers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/sales.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security/ir.model.access.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/sales.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/__manifest__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/controllers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/controllers/controllers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/demo/demo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/models/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/models/p_template.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/models/rental_type.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/security/ir.model.access.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/views/p_template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/views/rental_type.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../exam/rentalmanagement/views/views.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../wkhtmltox_0.12.6-1.focal_amd64.deb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chandradutt_mod/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../chandradutt_mod/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chandradutt_mod/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../chandradutt_mod/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chandradutt_mod/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../chandradutt_mod/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chandradutt_mod/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../chandradutt_mod/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chandradutt_mod/views/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chandradutt_mod/views/templates.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chandradutt_mod/views/views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chandradutt_mod/views/views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first_mod/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../first_mod/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first_mod/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../first_mod/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first_mod/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../first_mod/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first_mod/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../first_mod/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first_mod/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../first_mod/security/ir.model.access.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first_mod/views/views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../first_mod/views/views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../odoo/addons/base/tests/test_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../odoo/addons/base/tests/test_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../odoo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../odoo/models.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25PdnyjJTUQlwrMapFKvRWzHGxz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eec529b8-4b72-4e26-9101-3ff7d46c91eb" name="Changes" comment="" />
+      <created>1645432825866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645432825866</updated>
+    </task>
+    <servers />
+  </component>
+</project>
