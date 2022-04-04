@@ -52,47 +52,48 @@ for i in range(len(l1)):
 
 # Q-4
 employees = {
-    'PM':{
-        'Robert_Downey':{
+    'PM': {
+        'Robert_Downey': {
             'TL':
-                {'Mark':{'exp':8},'Samual':{'exp':8},'Paul':{'exp':8},'Tom':{'exp':8}}
+                {'Mark': {'exp': 8}, 'Samual': {'exp': 8}, 'Paul': {'exp': 8}, 'Tom': {'exp': 8}}
         },
 
-        'Anney_Hathaway':{
+        'Anney_Hathaway': {
             'TL':
-                {'Chris':{'exp':5},'Pratt':{'exp':5},'Emma':{'exp':5},'Will':{'exp':5},'Smith':{'exp':5}
+                {'Chris': {'exp': 5}, 'Pratt': {'exp': 5}, 'Emma': {'exp':5}, 'Will': {'exp': 5}, 'Smith': {'exp': 5}
             }
         }
     },
-    'Manager':{
+    'Manager': {
         'Chris':
-            {'S_dev':{'Jennifer':{'exp':3.8},'Scott':{'exp':3.8},'Sophie':{'exp':3.8}},
+            {'S_dev': {'Jennifer': {'exp': 3.8}, 'Scott': {'exp': 3.8}, 'Sophie': {'exp': 3.8}},
         },
         'Will':
             {
-                'S_dev':{'Edge':{'exp':3},'Ryan':{'exp':3.5}}
+                'S_dev': {'Edge': {'exp': 3}, 'Ryan': {'exp': 3.5}}
         }
     },
-    'Mentor':{
-        'Paul':{
-            'S_dev':{'Fergal':{'exp':4.5}}
+    'Mentor': {
+        'Paul': {
+            'S_dev': {'Fergal': {'exp': 4.5}}
         },
 
-        'Tom':{
-            'J_dev':{'Jerry':{'exp':1.5}, 'James':{1.6}}
+        'Tom': {
+            'J_dev': {'Jerry': {'exp': 1.5}, 'James': {1.6}}
         },
-        'Mark':{
-            'J_dev':{'Leonardo':{'exp':1}, 'Alexandra':{'exp':1}}
+        'Mark': {
+            'J_dev': {'Leonardo': {'exp': 1}, 'Alexandra': {'exp': 1}}
         }
     },
-    'Reporting_manager':{
-        'Smith':{
-            'S_dev':{'Walker':{'exp':2.7}, 'Diana':{'exp':2.7}}
+    'Reporting_manager': {
+        'Smith': {
+            'S_dev': {'Walker': {'exp': 2.7}, 'Diana': {'exp': 2.7}}
         }
     }
 }
-
 # a.
+
+
 def a():
     """
     employees1 = employees['PM']['Anney_Hathaway']['TL']

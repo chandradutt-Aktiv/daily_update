@@ -28,7 +28,7 @@ x = {
 				"Jan": {"cost": [300], "sp": []},               # +10%
 				"Feb": {"cost": [280, 300, 285], "sp": []},     # +10%
 				"March": {"cost": [280, 300, 285], "sp": []},   # +15%
-				"April": {"cost": [360, 376], "sp": [10]}       # +10%
+				"April": {"cost": [360, 376], "sp": []}       # +10%
 			},
 	},
 	"s3": {
@@ -50,12 +50,12 @@ def a(x):
 		if type(value) == dict:
 			a(value)
 		elif len(value) > 1:
-			print(value)
+			print('cost price: ',value)
 			for cp in value:
 				per = ((cp*20)//100)
-				sp = per + (for i in value)
-				print(sp)
-				print(per)
+				sp = per + cp
+				print('selling price: ', sp)
+	# print(per)
 			
 			
 			

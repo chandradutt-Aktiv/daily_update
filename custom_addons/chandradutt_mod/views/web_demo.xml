@@ -53,7 +53,9 @@
         <t t-call="website.layout">
             <t t-set="title">Contact Page</t>
             <h1 align="center">get contact</h1>
-            Name: <t t-esc="details.name"/>
+            Name: <t t-esc="details.name"/><br/>
+            Phone: <t t-esc="details.phone"/><br/>
+            Email: <t t-esc="details.email"/><br/>
         </t>
     </template>
 </odoo>
