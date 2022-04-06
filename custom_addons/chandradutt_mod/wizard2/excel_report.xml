@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="excel_wizard">
+            <field name="name">excel_wizard form</field>
+            <field name="model">excel.report</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="Employee" />
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

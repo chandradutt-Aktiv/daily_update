@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <!-- server action to the one above -->
+
+        <record model="ir.actions.server" id="res_partner_action_server">
+            <field name="name">Open Wizard</field>
+            <field name="model_id" ref="model_res_partner"/>
+            <field name="binding_model_id" ref="model_res_partner"/>
+            <field name="binding_view_types">form</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                "type": "ir.actions.act_window",
+                "view_mode": "form",
+                "res_model": "server.wizard",
+                "action": "exam_wiz",
+                "context": {"active_id":record.ids}
+                }
+            </field>
+        </record>
+
+
+        <!--        <record model="ir.actions.server" id="res_partner_action_server">-->
+        <!--            <field name="name">Open wizard</field>-->
+        <!--            <field name="model_id" ref="model_res_partner"/>-->
+        <!--            <field name="state">code</field>-->
+        <!--            <field name="code">-->
+        <!--                action = {-->
+        <!--                "type": "ir.actions.act_window",-->
+        <!--                "view_mode": "tree,form",-->
+        <!--                "res_model": model._name,-->
+        <!--                "action": record.wizard(),-->
+        <!--                }-->
+        <!--            </field>-->
+        <!--        </record>-->
+    </data>
+</odoo>

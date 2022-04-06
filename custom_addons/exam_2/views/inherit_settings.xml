@@ -1,0 +1,40 @@
+<odoo>
+    <record id="res_config_settings_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.custom</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Exam_2" string="exam 2" data-key="exam_2"/>
+                <h2>exam 2</h2>
+                <div class="row mt16 o_settings_container" name="catalog_setting_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <label for="module_mass_mailing"/>
+                        </div>
+                        <div class="o_setting_center_pane">
+                            <group>
+                                <sheet>
+                                    <field name="module_mass_mailing"/>
+                                    <field name="sale_details"/>
+                                </sheet>
+                            </group>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_exam2_settings_open" model="ir.actions.act_window">
+        <field name="name">exam2 Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form_inherit"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module':'exam_2'}</field>
+    </record>
+
+</odoo>

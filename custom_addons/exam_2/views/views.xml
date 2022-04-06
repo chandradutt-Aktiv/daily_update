@@ -1,0 +1,35 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="exam_list">
+            <field name="name">exam list</field>
+            <field name="model">exam.exam</field>
+            <field name="arch" type="xml">
+                <tree>
+<!--                    <field name="bdate"/>-->
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="exam_action_window">
+            <field name="name">exam window</field>
+            <field name="res_model">exam.exam</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+
+        <menuitem name="exam" id="exam_menu_root" action="exam_action_window"/>
+        <menuitem name="Configuration"
+                  id="open_configuration_settings"
+                  parent="exam_menu_root"
+                  sequence="100"
+        />
+        <menuitem name="Settings"
+                  id="open_settings_window"
+                  parent="open_configuration_settings"
+                  action="action_exam2_settings_open"/>
+
+
+<!--        <menuitem name="Menu 1" id="exam.menu_1" parent="exam.menu_root"/>-->
+    </data>
+</odoo>

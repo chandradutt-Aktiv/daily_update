@@ -55,6 +55,8 @@
                   action="chandradutt_mod.action_window"/>
         <menuitem name="Server to list" id="chandradutt_mod" parent="chandradutt_mod.menu_2"
                   action="chandradutt_mod.action_server"/>
+        <menuitem name="Excel Timesheet Report" id="excel_mod" parent="chandradutt_mod.menu_root"
+                  action="chandradutt_mod.excel_wizard"/>
 
     </data>
 </odoo>
