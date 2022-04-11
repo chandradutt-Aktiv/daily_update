@@ -20,13 +20,14 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale', 'employee'],
+    'depends': ['base', 'sale', 'report_xlsx', 'contacts'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/web_demo.xml',
         'views/views.xml',
+        'data/mail_template.xml',
         'wizard2/excel_report.xml',
         'wizard/chandradutt_wizard.xml',
         'views/sales.xml',
@@ -37,5 +38,5 @@
         'demo/demo.xml',
     ],
     'licence': 'LGPL-3',
-    'application':True
+    'application': True
 }

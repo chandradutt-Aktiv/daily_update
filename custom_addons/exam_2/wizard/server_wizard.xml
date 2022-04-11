@@ -6,9 +6,13 @@
             <field name="arch" type="xml">
                 <form>
                     <group>
-                        <field name="product"/>
-                        <field name="qty"/>
-                        <field name="unit_price"/>
+                        <field name="order_line">
+                            <tree editable="bottom">
+                                <field name="product_id"/>
+                                <field name="qty"/>
+                                <field name="unit_price"/>
+                            </tree>
+                        </field>
                     </group>
                     <footer>
                         <button name="wizarddd" type="object" string="create record"/>
@@ -23,8 +27,6 @@
             <field name="res_model">server.wizard</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
-            <!--            <field name="state">code</field>-->
-            <!--            <field name="code">action = wizard()</field>-->
         </record>
 
     </data>

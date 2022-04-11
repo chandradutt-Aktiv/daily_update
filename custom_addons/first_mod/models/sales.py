@@ -101,3 +101,4 @@ class Sale_Order_Inherited(models.Model):
            if len(rec.order_line) > 3:
                 raise UserError('order lines needs less than 3')
         return res
+    

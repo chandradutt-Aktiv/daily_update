@@ -13,8 +13,9 @@
                 "type": "ir.actions.act_window",
                 "view_mode": "form",
                 "res_model": "server.wizard",
-                "action": "exam_wiz",
-                "context": {"active_id":record.ids}
+                "action": "exam_wiz2",
+                "context": {"active_ids":record.ids},
+                "target":"new",
                 }
             </field>
         </record>

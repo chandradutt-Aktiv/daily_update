@@ -53,10 +53,10 @@
 
         <menuitem name="List" id="chandradutt_mod.menu_1_list" parent="chandradutt_mod.menu_1"
                   action="chandradutt_mod.action_window"/>
-        <menuitem name="Server to list" id="chandradutt_mod" parent="chandradutt_mod.menu_2"
-                  action="chandradutt_mod.action_server"/>
-        <menuitem name="Excel Timesheet Report" id="excel_mod" parent="chandradutt_mod.menu_root"
-                  action="chandradutt_mod.excel_wizard"/>
+<!--        <menuitem name="test" id="chandradutt_mod11" parent="chandradutt_mod.menu_2"-->
+<!--                  action="chandradutt_mod_chandradutt_wizard_action"/>-->
+<!--        <menuitem name="Excel Timesheet Report" id="excel_mod" parent="chandradutt_mod.menu_root"-->
+<!--                  action="chandradutt_mod.excel_report"/>-->
 
     </data>
 </odoo>

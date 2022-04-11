@@ -7,6 +7,8 @@ class server_change(models.Model):
 	"""
 	_inherit = 'res.partner'
 	
+	
+	
 	def writeeee(self):
 		print('beforeeeeeeeeeeeeeeeeeeeeeee')
 		# context = self._context

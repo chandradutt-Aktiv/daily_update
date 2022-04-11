@@ -46,14 +46,19 @@ class hospital_m(models.Model):
 		for partner in self:
 			partner.s_count = super(hospital_m, self).search_count([])
 	
-	def name_get(self):
-		"""
-		getting first and last name
-		"""
-		if self.lname:
-			return [(record.id, f"{self.fname} -- {self.lname}") for record in self]
-		else:
-			return [(record.id, f"{self.fname}") for record in self]
+	def send_mail(self):
+		print('Mailllllllllllllllllll')
+		template_id = self.env.ref("hospital_m.mail_template_demo").id
+		self.env['mail.template'].browse(template_id).send_mail(self.id, force_send=True)
+	
+	# def name_get(self):
+	# 	"""
+	# 	getting first and last name
+	# 	"""
+	# 	if self.lname:
+	# 		return [(record.id, f"{self.fname} -- {self.mobile}") for record in self]
+	# 	else:
+	# 		return [(record.id, f"{self.fname}") for record in self]
 	
 	@api.onchange('blood_group')
 	def bl_g(self):

@@ -19,8 +19,8 @@ class InheritSettings(models.TransientModel):
 		getting values of field
 		"""
 		res = super(InheritSettings, self).get_values()
-		Values = self.env['ir.config_parameter']
-		sale_details = Values.get_param('exam_2.sale_details')
+		values = self.env['ir.config_parameter']
+		sale_details = values.get_param('exam_2.sale_details')
 		if sale_details:
 			lines = [(6, 0, literal_eval(sale_details))]
 			res.update({"sale_details": lines})

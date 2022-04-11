@@ -28,6 +28,7 @@ class first_mod(models.Model):
     @api.model
     def create(self, vals):
         rtn = super().create(vals)
+        print(rtn)
         # rtn = self.env['ir.actions.act_window'].create(vals)
         return rtn
     
