@@ -46,10 +46,11 @@ class hospital_m(models.Model):
 		for partner in self:
 			partner.s_count = super(hospital_m, self).search_count([])
 	
-	def send_mail(self):
+	def send_mail_patient(self):
 		print('Mailllllllllllllllllll')
 		template_id = self.env.ref("hospital_m.mail_template_demo").id
 		self.env['mail.template'].browse(template_id).send_mail(self.id, force_send=True)
+		# self.env['mail.template'].browse(template_id).send_mail(self.id, force_send=True)
 	
 	# def name_get(self):
 	# 	"""

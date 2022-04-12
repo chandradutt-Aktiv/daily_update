@@ -41,7 +41,7 @@
                     </header>
                     <sheet>
                         <div class="oe_button_box" name="button_box">
-                            <button name="send_mail" type="object" string="Send Email"/>
+                            <button name="send_mail_patient" type="object" string="Send Email"/>
                             <button class="btn btn-primary" icon="fa-calendar">
                                 <field string="Appointment Date" name="a_date" widget="date"/>
                             </button>
