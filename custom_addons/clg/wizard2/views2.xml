@@ -1,25 +1,37 @@
-<!--<odoo>-->
-<!--    <data>-->
-<!--        <record model="ir.ui.view" id="clg_form2">-->
-<!--            <field name="name">clg form2</field>-->
-<!--            <field name="model">wiz2.wiz2</field>-->
-<!--            <field name="arch" type="xml">-->
-<!--                <form>-->
-<!--                    <group>-->
-<!--                        <field name="salary"/>-->
-<!--                    </group>-->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="clg_wizard_form2">
+            <field name="name">clg form2</field>
+            <field name="model">wiz2.wiz2</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="salary"/>
+                    </group>
 <!--                    <footer>-->
 <!--                        <button name="%(clg.action_window)d" string="Print" type="action"/>-->
 <!--                        <button name="cancel" string="Cancel" special="cancel"/>-->
 <!--                    </footer>-->
-<!--                </form>-->
-<!--            </field>-->
-<!--        </record>-->
-<!--        <record id="clg.added_wiz2" model="ir.actions.act_window">-->
-<!--            <field name="name">clg form2</field>-->
+                </form>
+            </field>
+        </record>
+
+<!--        <record id="clg_wizard" model="ir.actions.act_window">-->
+<!--            <field name="name">wizard</field>-->
 <!--            <field name="res_model">wiz2.wiz2</field>-->
 <!--            <field name="view_mode">form</field>-->
+<!--&lt;!&ndash;            <field name="view_id" ref="clg_wizard_form2"/>&ndash;&gt;-->
 <!--            <field name="target">new</field>-->
 <!--        </record>-->
-<!--    </data>-->
-<!--</odoo>-->
+
+         <record id="clg_new_wizard" model="ir.actions.act_window">
+            <field name="name">wizard</field>
+            <field name="res_model">wiz2.wiz2</field>
+            <field name="view_mode">form</field>
+<!--            <field name="view_id" ref="clg_wizard_form2"/>-->
+            <field name="target">new</field>
+        </record>
+
+
+    </data>
+</odoo>

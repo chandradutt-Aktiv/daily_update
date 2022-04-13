@@ -24,7 +24,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        # 'wizard2/views2.xml',
+        'wizard2/views2.xml',
         'wizard/wizard_views.xml',
         'views/salex.xml',
         'data/res_partner_category_data.xml',

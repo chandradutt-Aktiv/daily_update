@@ -121,24 +121,25 @@
 
         <!-- Top menu item -->
 
-        <menuitem name="clg" id="clg.menu_root"/>
+        <menuitem name="clg" id="menu_root"/>
 
         <!-- menu categories -->
 
-        <menuitem name="Menu 1" id="clg.menu_1" parent="clg.menu_root"/>
-        <menuitem name="Menu 2" id="clg.menu_2" parent="clg.menu_root"/>
+        <menuitem name="Menu 1" id="menu_1" parent="menu_root"/>
+        <menuitem name="Menu 2" id="menu_2" parent="menu_root"/>
 
         <!-- actions -->
 
-        <menuitem name="List" id="clg.menu_1_list" parent="clg.menu_1"
-                  action="clg.action_window"/>
-        <menuitem name="Server to list" id="clg" parent="clg.menu_2"
+        <menuitem name="List" id="clg_menu_1_list" parent="menu_1"
+                  action="clg_new_wizard"/>
+        <menuitem name="Server to list" id="clg" parent="menu_2"
                   action="clg.action_server"/>
 
-        <menuitem name="wizzz" id="menu_3" parent="clg.menu_root"
+        <menuitem name="wizzz" id="menu_3" parent="menu_root"
                   action="clg_added_wiz"/>
-<!--        <menuitem name="wizard2" id="menu34" parent="clg.menu_2"-->
-<!--                  action="clg.added_wiz2"/>-->
+<!--        <menuitem name="wizard2" id="menu34" parent="menu_2"-->
+<!--                  action="clg_added_wiz2"/>-->
+<!--        <menuitem name="new wizard" id="new_wizard" parent="menu_2" action="clg_added_wiz22"/>-->
 
     </data>
 </odoo>
