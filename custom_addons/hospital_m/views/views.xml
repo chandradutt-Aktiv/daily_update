@@ -16,13 +16,13 @@
                     <field name="email"/>
                     <field name="dateofbirth"/>
                     <field name="address"/>
-                    <field name="v_charge"/>
-                    <field name="blood_group"/>
+                    <field name="v_charge" sum="Total Charge"/>
+                    <field name="blood_group" widget="tags"/>
                     <field name="disease"/>
                     <field name="a_date"/>
                     <field name="d_speciality"/>
-<!--                    <field name="s_count"/>-->
-<!--                              <field name="appoinment_date"/>-->
+                    <!--                    <field name="s_count"/>-->
+                    <!--                              <field name="appoinment_date"/>-->
                 </tree>
             </field>
         </record>
@@ -41,7 +41,8 @@
                     </header>
                     <sheet>
                         <div class="oe_button_box" name="button_box">
-                            <button name="send_mail_patient" type="object" string="Send Email"/>
+                            <button name="send_mail_patient" type="object" class="btn btn-primary"
+                                    string="Send Email"/>
                             <button class="btn btn-primary" icon="fa-calendar">
                                 <field string="Appointment Date" name="a_date" widget="date"/>
                             </button>
@@ -52,7 +53,7 @@
                         </div>
                         <group>
                             <!--            <field name="p_id" placeholder="Patient Id"/>-->
-                            <field name="fname" placeholder="First Name"/>
+                            <field name="fname" placeholder="First Name" />
                             <field name="lname" placeholder="Last name"/>
                             <field name="gender" force_save="1" widget="radio"/>
                             <field name="mobile" widget="mobile"/>
@@ -60,7 +61,7 @@
                             <field name="dateofbirth" placeholder="Date Of Birth"/>
                             <field name="image" widget="image"/>
                             <field name="address"/>
-                            <field name="v_charge"/>
+                            <field name="v_charge" widget="monetary"/>
                             <field name="blood_group"/>
                             <field name="bg" force_save="1" string="blood group on readonly"/>
                             <field name="disease"/>
@@ -111,7 +112,7 @@
                 <search string="patient">
                     <separator/>
                     <filter string="gender" name="gender" domain="[('gender','=','male')]"/>
-<!--                     <filter string="gender" name="gender" domain="[('gender','=','male')]"/>-->
+                    <!--                     <filter string="gender" name="gender" domain="[('gender','=','male')]"/>-->
                     <!--                    <field name="doc_names"/>-->
                     <group expand="1" string="Group by">
                         <filter name="fname" string="Fname" context="{'group_by':'fname'}"/>

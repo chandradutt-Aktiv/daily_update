@@ -1,5 +1,4 @@
 import datetime
-
 from odoo import models, fields, api
 from odoo.exceptions import UserError
 from datetime import date
@@ -76,7 +75,7 @@ class Sale_Order_Inherited(models.Model):
     todays_date = fields.Date(default=date.today())
     
     def search_data(self):
-        res = self.env['sale.order'].search([("payment_term_id","!=",False)]).read(['payment_term_id'])
+        res = self.env['sale.order'].search([("payment_term_id", "!=", False)]).read(['payment_term_id'])
         print(res, "---------------------------------")
         return res
     
