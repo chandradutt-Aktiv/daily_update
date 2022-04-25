@@ -1,4 +1,4 @@
-'''
+# '''
 
 # filter map and reduce function
 from functools import reduce
@@ -87,8 +87,7 @@ def fact(n):
 
 print(fact(5))
 
-'''
-"""
+
 def fun1(n):
     if(n<1):
         return
@@ -98,7 +97,6 @@ def fun1(n):
         print(n)
 
 fun1(3)
-"""
 
 print('hello world %d python %s' % (1.,'programing'))
 print('hello {} you are good at {}'.format('world','python'))

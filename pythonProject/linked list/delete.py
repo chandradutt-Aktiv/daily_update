@@ -38,7 +38,7 @@ class Linkedlist:
 		newnode = Node(data)
 		newnode.next = self.head
 		self.head = newnode
-		print('inserted')
+		# print('inserted')
 		
 	def delbegin(self):
 		if self.head is None:
@@ -81,17 +81,34 @@ class Linkedlist:
 		while temp:
 			print(temp.data)
 			temp = temp.next
-		
+			
+	
+	def delete_unsorted(self):
+		curr = self.head
+		prev = Node(None)
+		mset = set()
+		while curr:
+			val = curr.data
+			if val in mset:
+				prev.next = curr.next
+			else:
+				mset.add(val)
+				prev = curr
+			curr = curr.next
+		return curr
 			
 
 ll = Linkedlist()
 ll.insertbeg(1)
 ll.insertbeg(2)
-ll.disp()
-# ll.delbegin()
+# ll.disp()
 ll.insertbeg(4)
 ll.insertbeg(3)
-ll.disp()
+# ll.delbegin()
+ll.insertbeg(2)
+ll.insertbeg(3)
+# ll.disp()
 ll.search_element(40)
 # ll.dellist()
+ll.delete_unsorted()
 ll.disp()

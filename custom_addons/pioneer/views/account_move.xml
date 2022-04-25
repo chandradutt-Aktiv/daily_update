@@ -8,16 +8,16 @@
                 <!--                <form>-->
                 <xpath expr="//field[@name='invoice_line_ids'] / tree / field [@name='quantity']"
                        position="before">
-                    <field name="delivery_address" optional="hide"/>
-                    <field name="vendor" domain="[('supplier_rank','>', 0)]" optional="hide"/>
+                    <field name="delivery_address_id" optional="hide"/>
+                    <field name="vendor_id" domain="[('supplier_rank','>', 0)]" optional="hide"/>
                     <field name="vendor_price" optional="hide"/>
                     <field name="planned_gp" optional="hide"/>
                     <field name="description" optional="hide"/>
                 </xpath>
                 <xpath expr="//field[@name='line_ids'] / tree / field [@name='account_id']"
                        position="before">
-                    <field name="delivery_address" optional="hide"/>
-                    <field name="vendor" domain="[('supplier_rank','>', 0)]" optional="hide"/>
+                    <field name="delivery_address_id" optional="hide"/>
+                    <field name="vendor_id" domain="[('supplier_rank','>', 0)]" optional="hide"/>
                     <field name="vendor_price" optional="hide"/>
                     <field name="planned_gp" optional="hide"/>
                     <field name="description" optional="hide"/>

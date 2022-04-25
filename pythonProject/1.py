@@ -21,8 +21,8 @@ def checkMagazine(magazine, note):
 		print('Yes')
 	else:
 		print('No')
-	
-	
+
+
 
 
 if __name__ == '__main__':
